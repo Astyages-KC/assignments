@@ -1,0 +1,103 @@
+previous code
+<body>
+  <div class="billing-form">
+    <h1>Billing Form</h1>
+    <label>Name:</label>
+    <input id="billName" />
+    <br />
+    <label>Email:</label>
+    <input id="billEmail" />
+    <br />
+    <label>Address:</label>
+    <input id="billAddress" />
+    <br />
+    <label>City</label>
+    <input id="billCity" />
+    <br />
+    <label>State</label>
+    <input id="billState" />
+    <br />
+    <lable>Zip:</lable>
+    <input id=billZip />
+    <br />
+    <button>Copy to shipping form</button>
+  </div>
+  <div class="shipping-form">
+    <h1>
+      Shipping Form
+    </h1>
+    <label>Name:</label>
+    <input id="shipName" />
+    <br />
+    <label>Email:</label>
+    <input id="shipEmail" />
+    <br />
+    <label>Address:</label>
+    <input id="shipAddress" />
+    <br />
+    <label>City</label>
+    <input id="shipCity" />
+    <br />
+    <label>State</label>
+    <input id="shipState" />
+    <br />
+    <lable>Zip:</lable>
+    <input id=shipZip /> <br />
+  </div>
+
+  // A $( document ).ready() block.
+$(document).ready(function() {
+  console.log("ready!");
+
+  $("button").on("click", transferBillToShip);
+
+  function transferBillToShip() {
+    var name = $("#billName").val();
+    $("#shipName").val(name);
+
+    var email = $("#billEmail").val();
+    $("#shipEmail").val(email);
+
+    var address = $("#billAddress").val();
+    $("#shipAddress").val(address);
+
+    var city = $("#billCity").val();
+    $("#shipCity").val(city);
+
+    var state = $("#billState").val();
+    $("#shipState").val(state);
+
+    var zip = $("#billZip").val();
+    $("#shipZip").val(zip);
+  }
+});
+
+adder(5, 10);
+
+function adder(num1, num2) {
+  var result = num1 + num2;
+  console.log(result);
+}
+
+.billing-form {
+    width: 300px;
+    background-color: blue; 
+    text-align: center;
+    padding: 50px;
+}
+.shipping-form {
+    width: 300px;
+    background-color: red;
+    text-align: center;
+    padding: 50px;
+
+    function fancyFunction() {
+  var cars = ["bmw", "toyota", "subaru", "jeep", "gmc", "toyota"];
+  for (var i = 0; i < cars.length; i++) {
+    if (cars[i] === "toyota") {
+      console.log("that is a toyota!");
+    } else {
+      console.log("thats not a toyota");
+    }
+}
+}

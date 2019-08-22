@@ -1,0 +1,22 @@
+body {
+    background-color: #111111;
+}
+h1 {
+    text-align: center;
+    color: #E2E80F;
+    font-size: 2.5em;
+}
+p {
+    color: #eeeeee;
+    font-size: larger;
+    line-height: 140%;
+}
+span:hover {
+    color: #49DAFF;
+    text-decoration: underline;
+    cursor: grab;
+}
+p#film-description {
+      font-size: normal;
+      font-style: italic;
+}

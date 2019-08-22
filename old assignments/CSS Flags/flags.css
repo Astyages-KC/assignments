@@ -1,0 +1,307 @@
+.france {
+    position: absolute;
+    top: 3px;   
+    left: 5px;
+}   
+.fBlue {
+    height: 210px;
+    width:100px;
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    background-color: blue;
+    border-top: 3px solid lightblue;
+    border-bottom: 3px solid lightblue;
+    border-left: 3px solid lightblue;
+}
+.fWhite {
+    height: 210px;
+    width:100px;
+    position: absolute;
+    left: 110px;
+    top: 30px;
+    background-color:white;
+    border-top: 3px solid lightblue;
+    border-bottom: 3px solid lightblue;
+}
+.fRed {
+    height: 210px;
+    width:100px;
+    position: absolute;
+    left: 210px;
+    top: 30px;
+    background-color: red;
+    border-top: 3px solid lightblue;
+    border-bottom: 3px solid lightblue;
+    border-right: 3px solid lightblue;
+}
+.germany {
+    position: absolute;
+    top: 3px;
+    left: 360px;
+}
+.gBlack {
+    height: 70px;
+    width: 300px;
+    position: absolute;
+    left: 1px;
+    top: 30px;
+    background-color: black;
+    border-top: 3px solid lightblue;
+    border-left: 3px solid lightblue;
+    border-right: 3px solid lightblue;
+}
+.gRed {
+    height: 70px;
+    width: 300px;
+    position: absolute;
+    left: 1px;
+    top: 100px;
+    background-color: red;
+    border-left: 3px solid lightblue;
+    border-right: 3px solid lightblue;
+}
+.gYellow {
+    height: 70px;
+    width: 300px;
+    position: absolute;
+    left: 1px;
+    top: 170px;
+    background-color: yellow;
+    border-bottom: 3px solid lightblue;
+    border-left: 3px solid lightblue;
+    border-right: 3px solid lightblue;
+}
+.madagascar {
+    position: absolute;
+    top: 3px;
+    left: 715px;
+}
+.mWhite {
+    height: 210px;
+    width: 100px;
+    position: absolute;
+    left: 1px;
+    top: 30px;
+    background-color: white;
+    border-top: 3px solid lightblue;
+    border-left: 3px solid lightblue;
+    border-bottom: 3px solid lightblue;
+}
+.mRed {
+    height: 105px;
+    width: 200px;
+    position: absolute;
+    left: 104px;
+    top: 30px;
+    background-color: red;
+    border-top: 3px solid lightblue;
+    border-right: 3px solid lightblue;
+}
+.mGreen {
+    height: 105px;
+    width: 200px;
+    position: absolute;
+    left: 104px;
+    top: 138px;
+    background-color: green;
+    border-bottom: 3px solid lightblue;
+    border-right: 3px solid lightblue;
+}
+.switzerland {
+    position: absolute;
+    top: 300px;
+    left: 5px;
+}
+.sRed {
+    height: 210px;
+    width: 300px;
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    background-color: red;
+    border: 3px solid lightblue;
+}
+.sWhite1 {
+    height: 136px;
+    width: 50px;
+    position: absolute;
+    left: 138px;
+    top: 72px;
+    background-color: white;
+}
+.sWhite2 {
+    height: 50px;
+    width: 136px;
+    position: absolute;
+    left: 95px;
+    top: 115px;
+    background-color: white;
+}
+.sweden {
+    position: absolute;
+    top: 300px;
+    left: 360px;
+}
+.sBlue {
+    height: 210px;
+    width: 300px;
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    background-color: rgb(22, 101, 161);
+    border: 3px solid lightblue;
+}
+.sYellow1 {
+    height: 210px;
+    width: 50px;
+    position: absolute;
+    left: 100px;
+    top: 33px;
+    background-color:rgb(249, 205, 48);
+}
+.sYellow2 {
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    left: 13px;
+    top: 111px;
+    background-color:rgb(249, 205, 48);
+}
+.gambia {
+    position: absolute;
+    left: 715px;
+    top: 300px;
+}
+.gaWhite {
+    height: 210px;
+    width: 300px;
+    position: absolute;
+    left: 1px;
+    top: 30px;
+    background-color: white;
+    border: 3px solid lightblue;
+}
+.gaRed {
+    height: 70px;
+    width: 300px;
+    position: absolute;
+    left: 4px;
+    top: 33px;
+    background-color: red;
+}
+.gaBlue {
+    height: 50px;
+    width: 300px;
+    position: absolute;
+    left: 4px;
+    top: 113px;
+    background-color: blue;
+}
+.gaGreen {
+    height: 70px;
+    width: 300px;
+    position: absolute;
+    left: 4px;
+    top: 173px;
+    background-color: green;
+}
+.tonga {
+    position: absolute;
+    left: 5px;
+    top: 600px;
+}
+.tRed1 {
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    height: 210px;
+    width: 300px;
+    background-color: red;
+    border: 3px solid lightblue;
+}
+.tWhite {
+    position: absolute;
+    left: 13px;
+    top: 33px;
+    height: 105px;
+    width: 133px;
+    background-color: white;
+}
+.tRed2 {
+    width: 22.2px;
+    height: 68px;
+    position: absolute;
+    left: 67px;
+    top: 51px;
+    background-color: red;
+}
+.tRed3 {
+    height: 22.2px;
+    width: 68px;
+    position: absolute;
+    left: 44px;
+    top: 73px;
+    background-color: red;
+}
+.japan {
+    position: absolute;
+    left: 360px;
+    top: 600px;
+}
+.jWhite {
+    height: 210px;
+    width: 300px;
+    position: absolute;
+    left:10px;
+    top: 30px;
+    background-color: white;
+    border: 3px solid lightblue;
+}
+.jRed {
+    position: absolute;
+    left: 102px;
+    top: 77px;
+    background-color: rgb(167, 9, 9);
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+.greece {
+    position: absolute;
+    left: 715px;
+    top: 600px;
+}
+.grWhite1 {
+    height: 210px;
+    width: 300px;
+    position: absolute;
+    left:10px;
+    top: 30px;
+    background-color: white;
+    border: 3px solid lightblue;
+}
+.grblue1 {
+    height: 40px;
+    width: 294px;
+    position: absolute;
+    left: 13px;
+    top: 200px;
+    background-color: blue
+}
+.niger {
+    position: absolute;
+    top: 900px;
+    left: 5px;
+}
+.maldives {
+    position: absolute;
+    top: 900px;
+    left: 360px;
+}
+.page {
+    position: absolute;
+    top: 1200px;
+    left: 460px;
+    font-size: xx-large;
+}

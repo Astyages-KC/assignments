@@ -1,0 +1,18 @@
+.Pets {
+    width: 600px;
+    border: solid 3px black;
+    background-color: green;
+    text-align: center;
+    padding: 50px;
+}
+
+
+button {
+    padding: 3px;
+    font-weight: bold;
+    margin: 10px;
+}
+.pet-image{
+    height: 250px;
+    width: 300px;
+}

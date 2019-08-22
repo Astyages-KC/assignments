@@ -1,0 +1,158 @@
+h1, h2, h3 {
+    text-align: center;
+}
+h1 {
+    font-size: 80px;
+    background-color: blueviolet;
+    font-family: Lexend Exa, oswalt, sans pro, arial;
+}
+h2 {
+    font-size: xx-large;
+    color: blue;
+    font-family: Lexend Exa, oswalt, sans pro, arial;
+}
+h3 {
+    font-size: xx-large;
+    text-decoration: underline;
+    position: absolute;
+    top: 870px;
+    left: 480px;
+}
+h4 {
+    text-decoration: underline;
+    position: absolute;
+    top: 1080px;
+    left: 480px;
+}
+body {
+    background-color: tan;
+}
+div {
+    display: block;
+}
+.open {
+    color: #684973;
+    font-style: oblique;
+    font-size: x-large;
+    text-align: center;
+}
+.facts {
+    
+    height: 200px;
+    width: 250px;
+    color: darkblue;
+    background-color: rgb(243, 120, 120);   
+    text-align: center; 
+    position: static;
+  border: 3px solid yellow;
+}
+.timeline {
+    
+    height: 200px;
+    width: 250px;
+    text-align: center;
+    color: darkred;
+    background-color: rgb(240, 236, 236); 
+    position: absolute;
+    left: 268px;
+    top: 300px;
+  border: 3px solid yellow;
+}
+.difference {
+    
+    height: 200px;
+    width: 250px;
+    text-align: center;
+    color:white;
+    background-color: rgb(93, 93, 238); 
+    position: absolute;
+    left: 528px;
+    top: 300px;
+  border: 3px solid yellow;
+}
+.huge {
+    
+    height: 480px;
+    width: 330px;
+    font-size: 21px;
+    text-align: center;
+    background-color: rgba(202, 165, 170,.5); 
+    position: absolute;
+    left: 800px;
+    top: 300px;
+  border: 3px dotted rgba(71, 69, 173,.5);
+  border-radius: 8px;
+}
+.fake {
+    height: 100px;
+    width: 360px;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgba(202, 165, 170,.5); 
+    position: absolute;
+    left: 390px;
+    top: 680px;
+  border: 3px solid rgba(71, 69, 173,.5);
+  border-radius: 10px;
+}
+.sight {
+    height: 150px;
+    width: 360px;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgba(243, 237, 238, 0.5); 
+    position: absolute;
+    left: 390px;
+    top: 510px;
+  border: 3px inset rgba(236, 240, 219, 0.5);
+  border-radius: 20px;
+}
+img {
+    height: 300px;
+    width: 360px;
+    position: absolute;
+    left: 15px;
+    top: 530px;
+    border: 4px double black;
+}
+.forSale {
+    height: 100px;
+    width: 320px;
+    background-color: white;
+    border: 4px double black;
+    border-radius: 5px;
+    font-size: 20px;
+    position: absolute;
+    left: 60px;
+    top: 920px;
+}
+.forRent {
+    height: 100px;
+    width: 320px;
+    background-color: white;
+    border: 4px double black;
+    border-radius: 5px;
+    font-size: 20px;
+    position: absolute;
+    left: 390px;
+    top: 920px;
+
+}
+.etMeet {
+    height: 100px;
+    width: 320px;
+    background-color: white;
+    border: 4px double black;
+    border-radius: 5px;
+    font-size: 20px;
+    position: absolute;
+    left: 720px;
+    top: 920px;
+}
+.date {
+    font-size: 20px;
+    position: absolute;
+    left: 720px;
+    top: 990px;
+    
+}

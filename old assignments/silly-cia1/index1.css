@@ -1,0 +1,19 @@
+
+h1, h2 {
+    text-align: center;
+}
+div.paragraph  {
+    font-size: large;
+} 
+a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  ul li {
+    text-decoration: underline;
+  }
+  img { 
+      padding: 30px; 
+  }
