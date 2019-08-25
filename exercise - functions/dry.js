@@ -18,7 +18,26 @@ function numbersTri(numb1, numb2, numb3) {
 var nummbers = numbersTri(50, 200, 3);
 console.log(largestNum)
 
+function oddOrEven(num1eo){
+    let isEven = true;
+    for(let i = 0; i < num1eo; i++)
+    isEven = !isEven
+}
+    if (isEven) {
+        return "even"
+    } else {
+        return "odd"
+    }
+console.log(oddOrEven(7))
+console.log(oddOrEven(6))
 
+// another way to do this
+// evenOrOdd = (x) => {
+//     if (x % 2 === 0){
+//         return "even";
+//     }else return "odd";
+//  }
+//  console.log(evenOrOdd(9));
 
 let myString = function(str) {
     if (str.length <= 20) {

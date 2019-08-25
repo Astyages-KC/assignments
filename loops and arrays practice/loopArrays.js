@@ -1,9 +1,10 @@
-console.log ("  #1")
-var officeItems = ["stapler", "monitor", "computer", "desk", "lamp", "computer", "lamp", "stapler", "computer",  "computer"]
-
 count = 0;
 
-for (let i = 0; i < officeItems.length; i++) {
+console.log ("  #1")
+var officeItems = ["stapler", "monitor", "computer", "desk", "lamp", "computer", "lamp", "stapler", "computer",  "computer"];
+
+
+for (var i = 0; i < officeItems.length; i++) {
     if (officeItems[i] === "computer") {
         count++;
     }
@@ -43,16 +44,14 @@ for (let i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++) {
                 console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is not old enough to see Mad Max don't let her in"); 
     }
 }
-console.log("  Optional ")
-var lightSwitch = [2, 3, 2]
- 
-count = 0;
-
-for (let i=0;i < lightSwitch.length; i++) {
-    count = lightSwitch[i] + count;
-    if ((lightSwitch[i] % 2
-        0 < 1 || > 1) {
-        console.log("number is odd")
-    }
+console.log("  Optional ");
+var lightSwitch = [2, 5, 435, 4, 3];
+var sum = 0;
+for (var i = 0; i < lightSwitch.length; i++) {
+sum += lightSwitch[i]
+} 
+if (sum % 2 === 0) {
+  console.log("Light switch is on")
+} else {
+  console.log("Light switch is off")
 }
-
