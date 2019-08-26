@@ -1,0 +1,19 @@
+h1 {
+    color: red;
+    text-align: center;
+    font-size: 60px;
+}
+button {
+    padding: 3px;
+    font-weight: bold;
+    margin: 10px;
+    position: absolute;
+    left: 650px;
+    top: 200px;
+
+}
+.wolfAlice.someSongs {
+    color: black;
+    font-size: 30px;
+    text-align: center
+}

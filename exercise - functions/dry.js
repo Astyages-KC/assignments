@@ -1,7 +1,7 @@
 function sum(num1, num2) {
     return num1 + num2
 }
-var answer= sum(345, 255);
+var answer = sum(345, 255);
 console.log(answer)
 
 var largestNum = 0;
@@ -14,30 +14,17 @@ function numbersTri(numb1, numb2, numb3) {
         else
         largestNum = numb2;
 }
-
 var nummbers = numbersTri(50, 200, 3);
 console.log(largestNum)
 
-function oddOrEven(num1eo){
-    let isEven = true;
-    for(let i = 0; i < num1eo; i++)
-    isEven = !isEven
-}
-    if (isEven) {
-        return "even"
-    } else {
-        return "odd"
-    }
-console.log(oddOrEven(7))
-console.log(oddOrEven(6))
+evenOrOdd = (numEo) => {
+    if (numEo % 2 === 0){
+        return "even";
+    }else return "odd";
+ }
+ console.log(evenOrOdd(9));
+ console.log(evenOrOdd(8));
 
-// another way to do this
-// evenOrOdd = (x) => {
-//     if (x % 2 === 0){
-//         return "even";
-//     }else return "odd";
-//  }
-//  console.log(evenOrOdd(9));
 
 let myString = function(str) {
     if (str.length <= 20) {
@@ -48,5 +35,3 @@ let myString = function(str) {
 }
 console.log(myString("abcdefghijklmnopqrstuvwxyz"));
 console.log(myString("smallword"));
-// console.log(str);
-// console.log('letter count' + ' ' + mystring.length);
