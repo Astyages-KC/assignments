@@ -282,12 +282,44 @@
     border: 3px solid lightblue;
 }
 .grblue1 {
-    height: 40px;
-    width: 294px;
+    height: 23px;
+    width: 300px;
     position: absolute;
     left: 13px;
-    top: 200px;
+    top: 220px;
     background-color: blue
+}
+.grblue2 {
+    height: 23px;
+    width: 300px;
+    position: absolute;
+    left: 13px;
+    top: 174px;
+    background-color: blue 
+}
+.grblue3 {
+    height: 23px;
+    width: 300px;
+    position: absolute;
+    left: 13px;
+    top: 128px;
+    background-color: blue 
+}
+.grblue4 {
+    height: 23px;
+    width: 300px;
+    position: absolute;
+    left: 13px;
+    top: 82px;
+    background-color: blue 
+}
+.grblue5 {
+    height: 23px;
+    width: 300px;
+    position: absolute;
+    left: 13px;
+    top: 33px;
+    background-color: blue 
 }
 .niger {
     position: absolute;
