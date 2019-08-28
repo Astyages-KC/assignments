@@ -299,26 +299,58 @@
 }
 .grblue3 {
     height: 23px;
-    width: 300px;
+    width: 176px;
     position: absolute;
-    left: 13px;
+    left: 137px;
     top: 128px;
     background-color: blue 
 }
 .grblue4 {
     height: 23px;
-    width: 300px;
+    width: 176px;
     position: absolute;
-    left: 13px;
+    left: 137px;
     top: 82px;
     background-color: blue 
 }
 .grblue5 {
     height: 23px;
-    width: 300px;
+    width: 176px;
+    position: absolute;
+    left: 137px;
+    top: 33px;
+    background-color: blue 
+}
+.grSb1 {
+    height: 46px;
+    width: 46px;
     position: absolute;
     left: 13px;
     top: 33px;
+    background-color: blue 
+}
+.grSb2 {
+    height: 46px;
+    width: 46px;
+    position: absolute;
+    left: 91px;
+    top: 33px;
+    background-color: blue 
+}
+.grSb3 {
+    height: 46px;
+    width: 46px;
+    position: absolute;
+    left: 13px;
+    top: 103px;
+    background-color: blue 
+}
+.grSb4 {
+    height: 46px;
+    width: 46px;
+    position: absolute;
+    left: 91px;
+    top: 105px;
     background-color: blue 
 }
 .niger {
@@ -326,10 +358,76 @@
     top: 900px;
     left: 5px;
 }
+.nOrange1 {
+    height: 70px;
+    width: 300px;
+    position: absolute;
+    left: 1px;
+    top: 30px;
+    border-top: 3px solid lightblue;
+    border-left: 3px solid lightblue;
+    border-right: 3px solid lightblue;
+    background-color: rgb(172, 47, 10);
+}
+.nOrange2 {
+    position: absolute;
+    left: 117px;
+    top: 106px;
+    background-color: rgb(172, 47, 10);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+.nGreen {
+    height: 70px;
+    width: 300px;
+    position: absolute;
+    left: 1px;
+    top: 170px;
+    background-color: green;
+    border-bottom: 3px solid lightblue;
+    border-left: 3px solid lightblue;
+    border-right: 3px solid lightblue;
+}
 .maldives {
     position: absolute;
     top: 900px;
     left: 360px;
+}
+.maRed {
+    height: 210px;
+    width: 300px;
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    background-color: red;
+    border: 3px solid lightblue;
+}
+.maGreen1 {
+    height: 100px;
+    width: 190px;
+    position: absolute;
+    left: 70px;
+    top: 84px;
+    background-color: green;
+}
+.maWhite {
+    position: absolute;
+    left: 145px;
+    top: 100px;
+    background-color: green;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+.maGreen2 {
+    position: absolute;
+    left: 135px;
+    top: 100px;
+    background-color: white;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
 }
 .page {
     position: absolute;

@@ -4,13 +4,13 @@ var header = document.getElementById("header")
 const h2 = document.createElement("h2")
 h2.textContent = "Javascript Made This"
 h2.className = "header"
-header.appendChild(h2)  //document.getElementById("header"). stick the fucking h2 shite in that thing there
+header.appendChild(h2)  
 
 const p = document.createElement("p")
 p.innerHTML = `<span class='nameColor'>Kevin</span> wrote the javascript`
 p.className = "header"
 header.appendChild(p)
-console.log(header)
+
 
 var left = document.getElementsByClassName("left")
 
@@ -30,3 +30,8 @@ right[0].innerHTML = ""
 right[1].innerHTML = ""
 
 })
+
+// var themeChange = document.getElementById("theme-drop-down")
+// if (themeChange === "theme-two") {
+//     themeChange.innerHTML = <option value="theme-two">red/black</option>
+// }

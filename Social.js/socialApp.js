@@ -1,6 +1,16 @@
 var wolfAlice = {
     bandname: "Wolf Alice",
     someSongs: ["Giant Peach", "Bros", "Purple and Green"],
+    studioAlbums: [
+        {
+            title: "My Love Is Cool",
+            released: "22 June 2015"
+        },
+        {
+            title: "Visions of a Life",
+            released: "29 September 2017"
+        }
+    ],
     Bandmembers: [
         {
         name: 'Ellie Rowsell',

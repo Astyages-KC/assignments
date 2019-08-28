@@ -1,0 +1,41 @@
+body {
+    background-color: lightblue;
+}
+div {
+    margin-top: 20px;
+    text-align: center;
+    border: 2px dashed green;
+    width: 50%;
+    margin-bottom: 20px;
+    margin: auto;
+}
+h1 {
+    text-align: center;
+}
+button {
+    padding: 10px;
+    margin: 10px;
+}
+input {
+    font-size: 16px;
+    width: 60px;
+
+}
+#answr {
+    background-color: lightyellow;
+    width: 80px;
+    text-align: center;
+    margin: auto;
+}
+#answr2 {
+    background-color: lightyellow;
+    width: 80px;
+    text-align: center;
+    margin: auto;
+}
+#answr3 {
+    background-color: lightyellow;
+    width: 80px;
+    text-align: center;
+    margin: auto;
+}
