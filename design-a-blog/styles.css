@@ -80,12 +80,11 @@ h5 {
     height: 220px;
     width: 245px;
     word-wrap: normal;
+    float: left;
+    display: inline;
+    margin-right: 10px;
 }
-#contain {
-    height: 225px;
-    width: 250px;
-    margin: auto;
-}
+
 .dogImg {
     height: 220px;
     width: 220px:
