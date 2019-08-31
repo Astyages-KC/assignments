@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #857885;
+    margin: auto;
+    text-align: center;
+    font-size: 60px;
+    margin: 30px;
+}
+nav {
+    position: sticky;
+    text-align: center;
+    background-color: #cfc7d2;
+    font-family: 'Cinzel', 'Bree Serif', serif, 'Courier New', Courier, monospace;
+}
+
+/* font-family: 'Bree Serif', serif;
+font-family: 'Cinzel', serif;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Underdog', cursive; */
+
+a {
+    display: inline;
+    font-size: 30px;
+    padding: 100px;
+}
+
+.numbHead {
+    font-size: 40px;
+}
+
+.tipTop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.belgDogs {
+    height: 500px;
+    width: 100%;
+    background-image: url("https://iheartdogs.com/wp-content/uploads/2015/04/shutterstock_226643389.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 0 0 8px 8px rgba(207, 199, 210, .5) inset;
+}
+
+.wrap1, .wrap2 {
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    background-image: url("https://data.whicdn.com/images/250450150/large.jpg");
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    line-height: 1.2;
+    font-size: 40px;
+    font-family: 'Permanent Marker', 'Underdog', cursive; Courier, monospace;
+    color: #553D36;
+    background-color: rgba(207, 199, 210, 0.80)
+}
+
+.midDrift {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.sleepyPup {
+    height: 500px;
+    width: 100%;
+    background-image: url("https://image.freepik.com/free-photo/tiny-sleepy-dog-bed-morning_1439-22.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 0 0 8px 8px rgba(207, 199, 210, .5) inset;
+}
+
+.mid1, .mid2 {
+    height: 500px;
+    width: 100%;
+    background-image: url("https://data.whicdn.com/images/250450150/large.jpg");
+}
+
+.reserve {
+    text-align: center;
+    font-size: 45px;
+}
+
+.bottomS {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 500px;
+    width: 100%;
+    background-image: url("https://media.giphy.com/media/IeDKafCf7wNYA/giphy.gif");
+}
+
+.contact {
+    color: purple;
+    text-align: center;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    background-color: #cfc7d2;
+    font-family: 'Cinzel', 'Bree Serif', serif, 'Courier New', Courier, monospace;
+}
+
+.map-link {
+    height: 500px;
+}
+
+iframe {
+    box-shadow: 0 0 8px 8px rgba(207, 199, 210, .5) inset;    
+}
+
+input {
+    font-size: 30px;
+}
+
+button {
+    font-size: 30px;
+}
+

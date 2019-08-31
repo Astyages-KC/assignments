@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Travel Form
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <h1>Kevin's Airline</h1>
+        <h2>Now Serving 3 locations!</h2>
+        <div>
+    <form name="flyForm">
+        <label>First Name</label>
+        <input placeholder="First Name" type="text" name="firstName">
+        <label>Last Name</label>
+        <input placeholder="Last Name" type="text" name="lastName">
+        <br/>
+        <label>Age</label> 
+        <input placeholder="Age" type="number" name="passAge">
+        <br/>
+        <lable>Gender</lable>
+        <input placeholder="Gender" type="text" name="passGender">
+        <br/>
+        <p>Flying to:</p>
+        <label>Boise</label>
+        <input type="radio" name="flyTo" value="Boise">
+        <label>Pocatello</label>
+        <input type="radio" name="flyTo" value="Pocatello">        
+        <label>West Yellowstone</label>
+        <input type="radio" name="flyTo" value="West Yellowstone">
+        <br/>
+        <p>Dietary restrictions:</p>
+        <label>Vegetarian</label>
+        <input type="checkbox" name="diet" value="Vegetarian ">
+        <lable>Kosher</lable>
+        <input type="checkbox" name="diet" value=" Kosher ">
+        <label>Lactose Free</label>
+        <input type="checkbox" name="diet" value=" Lactose Free ">
+        <label>Food Allergies</label>
+        <input type="checkbox" name="diet" value=" Food Allergies ">
+    <br/>
+        <button type="submit">Press to Enter</button>
+    </form>
+</div>
+    <script src="app.js"></script>
+</body>
+
+</html>

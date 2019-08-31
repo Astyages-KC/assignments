@@ -1,0 +1,29 @@
+div {
+    margin: auto;
+    background-color: lightgray;
+    font-size: 25px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: red;
+    font-size: 50px;
+    text-align: center;
+}
+
+input {
+    height: 20px;
+}
+
+label {
+    color: red;
+}
+
+p {
+    color: navy;
+}
+
+input[type=] {
+    font-size: 10px;
+    border: 2px solid black;
+}
