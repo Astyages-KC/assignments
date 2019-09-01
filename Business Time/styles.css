@@ -3,18 +3,30 @@
     padding: 0;
 }
 
+/* body {
+    display: grid;
+    grid-template-columns: 3 1fr;
+    grid-template-rows: 5 1fr;
+} */
+
 h1 {
     color: #857885;
     margin: auto;
     text-align: center;
     font-size: 60px;
-    margin: 30px;
+    margin: 5px;
 }
 nav {
-    position: sticky;
     text-align: center;
+    height: 180px;
+    padding: 40px;
     background-color: #cfc7d2;
     font-family: 'Cinzel', 'Bree Serif', serif, 'Courier New', Courier, monospace;
+}
+
+li {
+    display: inline;
+    list-style-type: none;
 }
 
 /* font-family: 'Bree Serif', serif;
@@ -25,7 +37,7 @@ font-family: 'Underdog', cursive; */
 a {
     display: inline;
     font-size: 30px;
-    padding: 100px;
+    padding: 150px;
 }
 
 .numbHead {
@@ -43,7 +55,7 @@ a {
     background-image: url("https://iheartdogs.com/wp-content/uploads/2015/04/shutterstock_226643389.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    box-shadow: 0 0 8px 8px rgba(207, 199, 210, .5) inset;
+    box-shadow: 0 0 8px 8px rgba(207, 199, 210, .8) inset;
 }
 
 .wrap1, .wrap2 {
@@ -58,7 +70,7 @@ a {
     width: 100%;
     line-height: 1.2;
     font-size: 40px;
-    font-family: 'Permanent Marker', 'Underdog', cursive; Courier, monospace;
+    font-family: 'Permanent Marker', 'Underdog', cursive, Courier, monospace;
     color: #553D36;
     background-color: rgba(207, 199, 210, 0.80)
 }
@@ -74,12 +86,13 @@ a {
     background-image: url("https://image.freepik.com/free-photo/tiny-sleepy-dog-bed-morning_1439-22.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    box-shadow: 0 0 8px 8px rgba(207, 199, 210, .5) inset;
+    box-shadow: 0 0 8px 8px rgba(207, 199, 210, .8) inset;
 }
 
 .mid1, .mid2 {
     height: 500px;
     width: 100%;
+    text-align: center;
     background-image: url("https://data.whicdn.com/images/250450150/large.jpg");
 }
 
@@ -91,7 +104,7 @@ a {
 .bottomS {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    height: 500px;
+    height: 300px;
     width: 100%;
     background-image: url("https://media.giphy.com/media/IeDKafCf7wNYA/giphy.gif");
 }
@@ -106,13 +119,9 @@ a {
     font-family: 'Cinzel', 'Bree Serif', serif, 'Courier New', Courier, monospace;
 }
 
-.map-link {
-    height: 500px;
-}
-
-iframe {
-    box-shadow: 0 0 8px 8px rgba(207, 199, 210, .5) inset;    
-}
+/* iframe {
+    box-shadow: 0 0 8px 8px rgba(207, 199, 210, .6) inset;    
+} */
 
 input {
     font-size: 30px;
@@ -122,3 +131,113 @@ button {
     font-size: 30px;
 }
 
+.priceTop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-family: 'Bree Serif', serif, 'Courier New', Courier, monospace;
+    background-color: #90D7FF;
+}
+
+.dayCare {
+    height: 725px;
+    width: 100%;
+    margin-top: 50px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.overNight {
+    height: 725px;
+    width: 100%;
+    margin-top: 50px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.dogSpa {
+    height: 725px;
+    width: 100%;
+    margin-top: 50px;   
+    font-size: 50px;
+    text-align: center;
+}
+
+.dayPrice {
+    display: grid;
+    font-size: 40px;
+    list-style-type: none;
+}
+
+.boardPrice {
+    display: grid;
+    font-size: 40px;
+    list-style-type: none;
+}
+
+.spaPrice {
+    display: grid;
+    font-size: 40px;
+    list-style-type: none;
+}
+
+.dayOpen {
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.overInc {
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.webCam {
+    text-align: center;
+}
+
+.camTalk {
+    font-size: 40px;
+    font-family: 'Permanent Marker', 'Underdog', cursive, Courier, monospace;
+    color: #553D36;
+    background-color: rgba(207, 199, 210, 0.80);
+    margin-bottom: 20px;
+}
+
+.dogTrain {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 40px;
+    font-family: 'Permanent Marker', 'Underdog', cursive, Courier, monospace;
+    color: #553D36;
+    background-color: rgba(207, 199, 210, 0.80);
+    text-align: center;
+}
+
+.trainVids {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto, auto, auto;
+    font-size: 30px;
+    font-family: 'Permanent Marker', 'Underdog', cursive, Courier, monospace;
+    color: purple;
+    background-color: rgba(207, 199, 210, 0.80);
+    text-align: center;
+}
+
+@media (min-width: 800px) {
+    .tipTop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .midDrift {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bottomS {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .trainVids {
+        display: grid;
+        grid-template-columns: 1 1fr;
+    }
+}
