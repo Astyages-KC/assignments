@@ -118,3 +118,9 @@ input {
     color: blue;
     background-color: lightsalmon;
 }
+
+@media (max-width: 1740px) {
+.goomDiv, .bobDiv, .cheepDiv {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}}

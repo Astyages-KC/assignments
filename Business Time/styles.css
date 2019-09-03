@@ -54,7 +54,7 @@ a {
     width: 100%;
     background-image: url("https://iheartdogs.com/wp-content/uploads/2015/04/shutterstock_226643389.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: contain;
     box-shadow: 0 0 8px 8px rgba(207, 199, 210, .8) inset;
 }
 
@@ -99,6 +99,15 @@ a {
 .reserve {
     text-align: center;
     font-size: 45px;
+}
+
+.reservation {
+    padding-top: 30px;
+}
+
+.resDate1 {
+    padding: 30px;
+    text-align: center;
 }
 
 .bottomS {
@@ -191,6 +200,7 @@ button {
 }
 
 .webCam {
+    padding: 40px;
     text-align: center;
 }
 
@@ -204,8 +214,7 @@ button {
 
 .dogTrain {
     display: grid;
-    grid-template-columns: 1fr;
-    font-size: 40px;
+    grid-template-columns: repeat(1, 1fr);    font-size: 40px;
     font-family: 'Permanent Marker', 'Underdog', cursive, Courier, monospace;
     color: #553D36;
     background-color: rgba(207, 199, 210, 0.80);
@@ -215,7 +224,6 @@ button {
 .trainVids {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto, auto, auto;
     font-size: 30px;
     font-family: 'Permanent Marker', 'Underdog', cursive, Courier, monospace;
     color: purple;
@@ -223,21 +231,34 @@ button {
     text-align: center;
 }
 
-@media (min-width: 800px) {
+@media only screen and (max-width: 768px) {
     .tipTop {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
     }
     .midDrift {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
     }
     .bottomS {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+    .dogTrain {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
     }
     .trainVids {
         display: grid;
-        grid-template-columns: 1 1fr;
+        grid-template-columns: repeat(1, 1fr);
+        
     }
+    .sleepyPup {
+        background-size: contain;
+    }
+    
 }

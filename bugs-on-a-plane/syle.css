@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+}
+button {
+    font-size: 15px;
+    color: red;
+    background-color: lightblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top:10px;
+}
+form {
+    font-size: 12px;
+    color: purple;
+}
+input {
+    border: 1px solid black;
+}
