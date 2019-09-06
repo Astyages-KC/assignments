@@ -5,10 +5,10 @@ function Records(name, title, salary, status) {
     this.title = title
     this.salary = salary
     this.status = "Full Time"
-    }
-        Records.prototype.printEmployeeForm = function () {
-            console.log(this)
-        }
+}
+Records.prototype.printEmployeeForm = function () {
+    console.log(this)
+}
 
 // const employees = new Records("Name", "Job Title", "Salary", "Status")
 
