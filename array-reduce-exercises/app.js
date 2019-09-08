@@ -58,7 +58,7 @@ function shoppingSpree(arr) {
  function flatten(arr) {
     return arr.reduce((fin, cur) => {   
     return fin.concat(cur)
-} , "" )
+} , [] )
 }
 var arrays = [
      ["1", "2", "3"],

@@ -1,0 +1,23 @@
+{
+    "menu": {
+        "hot sandwiches":[
+        {
+            "name": "philly cheese",
+            "toppings": ["steak", "provalone", "peppers", "onions"],
+            "price": "5.99"    
+        },
+        {
+            "name": "bistro turkey",
+            "toppings": ["turkey", "swiss", "grilled onions", "mayo"],
+            "price": "5.99"
+        },
+        {  
+            "name": "hot ham and cheese",
+            "toppings": ["cheddar cheese", "ham"],
+            "price": "4.99"
+        },
+        ]
+        {
+        "deserts": ["ice cream sunday", "cherry pie", "chocolate cake"]
+}
+}

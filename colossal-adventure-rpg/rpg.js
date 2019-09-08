@@ -1,76 +1,41 @@
-const readline = require("readline-sync")
+const rl = require("readline-sync");
 
 //////////////////////
 ///global variables////
-let gameOver = false
-let movePrint = false
-let fightRun = false
+let ifDead = false;
+let playerLife = 100;
 
+const player = {
+  health: 100,
+  inventory: {
+    goldPieces: 0,
+    manapotions: 3,
+    magerobe: 1,
+    spellbook: 1
+  }
+};
 
-//////////////////////
-///game functions ////
+const monsters = [
+  {
+    monsterName: "goblin",
+    damageDealt: 25
+  },
+  {
+    monsterName: "ogre",
+    damageDealt: 30
+  },
+  {
+    monsterName: "beholder",
+    damageDealt: 35
+  }
+];
 
-
-
-////////////////
-//////game//////
-
-
-const name = readline.question("Welcome to the Colossal world of TextQuest!!!  What is your name? ")
-
-console.log(`Thank you ${name}`)
-
-
-
-
-
-let myInv = {
-    goldPeices: 0,
-    manaPotions: 2,
-    playerHealth: 100,
+function getRandomNum(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-for (const [key, value] of Object.entries(myInv))
-console.log(key, value);
+ testi = getRandomNum(1, 3);
+console.log(testi)
 
-
-
-
-function Monster(nameMon, randomNess, damDealt) {
-    this.nameMon = nameMon
-    this.randomNess = randomNess
-    this.damDealt = damDealt
-}
-    Monster.prototype.showMonster = 
-    function () {
-        console.log(this)
-    }
-
-    const goblin = new Monster("Goblin", ".65", "10")
-    const ogre = new Monster("Ogre", ".40", "22")
-    const beholder = new Monster("Beholder", ".3", "37")
-
-
-    // function Monster(nameMon, damDealt) {
-//     this.nameMon = nameMon
-//     this.damDealt = damDealt
-// }
-//     Monster.prototype.showMonster = 
-//     function () {
-//         console.log(this)
-//     }
-
-//     const goblin = new Monster("Goblin", "10")
-//     const ogre = new Monster("Ogre", "22")
-//     const beholder = new Monster("Beholder", "37")
-
-//     const monsters = [goblin, ogre, beholder]
-//     const randMon = Math.floor(Math.random()*3)
-//         if(randMon === 0) {
-//             monstToFight = monsters[0]
-//         } else if(randMon === 1) {
-//             monstToFight = monsters[1]
-//         } else {
-//                 monstToFight = monsters[2]
-//         }
-//         console.log(monstToFight
