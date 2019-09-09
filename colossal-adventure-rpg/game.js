@@ -4,29 +4,36 @@ const readline = require("readline-sync");
 ///global variables////
 let ifDead = false;
 let playerLife = 100;
+// let manaReserve = 1;
+let manaCounter = 100;
+let manaUsed = 0;
+let fireBallSpellCost = 20;
+let fireBallDmg = 20;
+let magicMissilesCost = 10;
+let mmissilesDmg = 10;
 
 const player = {
   health: 100,
+  mana: 100,
   inventory: {
     goldPieces: 0,
-    manapotions: 3,
-    magerobe: 1,
+    teleport_rune: 3,
     spellbook: 1
   }
 };
 
 const monsters = [
   {
-    monsterName: "goblin",
-    damageDealt: 25
+    monsterName: "Goblin",
+    monsterHealth: 20
   },
   {
-    monsterName: "ogre",
-    damageDealt: 30
+    monsterName: "Ogre",
+    monsterHealth: 40
   },
   {
-    monsterName: "beholder",
-    damageDealt: 35
+    monsterName: "Minotaur",
+    monsterHealth: 50
   }
 ];
 
@@ -43,11 +50,12 @@ function getRandomInt(min, max) {
 ////walk function///
 function walk() {
   // const randNum = Math.floor(Math.random() * 3);
-  randNum = getRandomInt(1, 4)
+  randNum = getRandomInt(1, 4);
   if (randNum >= 1) {
     let monster = createMons();
     console.log(
-      `Master ${name}, you have encountered a ${monster.monsterName}`);
+      `Master ${name}, you have encountered a ${monster.monsterName}!`
+    );
     fightOrRun(monster);
   } else {
     console.log(
@@ -66,18 +74,67 @@ function createMons() {
 /////////Fight or Run function////////
 function fightOrRun(monster) {
   const fightRun = readline.keyInSelect(
-    ["Cast Spell", "Run Away"],
-    "Would you like to cast Fireball or Run away?"
+    ["Cast Spell", "Run Away", "Activate teleport rune"],
+    "Would you like to cast a spell or Run away?"
   );
   if (fightRun === 0) {
-    console.log("Magic flares from your fingertips!");
+    chooseSpell();
+    console.log(`\nMagic flares from your fingertips!`);
     fightMon(monster);
   } else if (fightRun === 1) {
     console.log("Run Away!!!!!!");
     runFrom(monster);
+  } else if (fightRun === 2) {
+    manaCounter = manaCounter + 10;
+    console.log(`Mystic power swirls around and you awaken in another part of the forest.  What will you do now?`);
+    player.teleport_rune = player.teleport_rune -1;
   } else {
     console.log(`\nCya later ${name}\n`);
     ifDead = true;
+  }
+}
+
+////////Mana counter//////
+function manaCount() {
+  manaCounter = manaCounter - manaUsed;
+  console.log(`Wizard ${name} you are down to ${manaCounter} mana`);
+}
+
+/////////choose spell functions////////
+function chooseSpell() {
+  const spellChoice = readline.keyInSelect(
+    ["Fireball", "Magic Missiles"],
+    "What spell would you like to cast?"
+  );
+  if (spellChoice === 0) {
+    fireBallCheck();
+  } else if (spellChoice === 1) {
+    magicMissileCheck();
+  } else {
+    console.log(`\nCya later ${name}\n`);
+    ifDead = true;
+  }
+}
+
+function fireBallCheck() {
+  //  manaCount()
+  if (manaCounter >= fireBallSpellCost) {
+    manaUsed = fireBallSpellCost;
+    // fightMon()
+  } else {
+    console.log("You do not have enough mana to cast that spell");
+    fightOrRun();
+  }
+}
+
+function magicMissileCheck() {
+  //  manaCount()
+  if (manaCounter >= magicMissilesCost) {
+    manaUsed = magicMissilesCost;
+    // fightMon();
+  } else {
+    console.log("You do not have enough mana to cast that spell");
+    fightOrRun();
   }
 }
 
@@ -85,12 +142,14 @@ function fightOrRun(monster) {
 
 function fightMon(monster) {
   // const randNum = Math.floor(Math.random() * 3);
-  randNum = getRandomInt(1, 8)
-  if (randNum > 6) {
-    console.log("You try to cast a fireball but it fizzles out");
+  randNum = getRandomInt(1, 8);
+  if (randNum > 5) {
+    console.log("You try to cast the spell but it fizzles in your hand");
     dmgTaken(monster);
+    manaCount();
   } else {
-    console.log("Your fireball spell blasts the monster and he dies in agony");
+    console.log("Your spell blasts the monster and he dies in agony");
+    manaCount();
     addToInv();
   }
 }
@@ -98,34 +157,35 @@ function fightMon(monster) {
 ///////// Damage Taken function /////////
 function dmgTaken(monster) {
   console.log(
-    `\nThe creature viciously attacks you! SMACK!  Ouch! You have taken damage!\n`
+    ` The creature viciously attacks you! SMACK!  Ouch! You have taken damage!\n`
   );
   creatureDamage = getRandomInt(12, 30);
   playerLife = playerLife - creatureDamage;
-  console.log(`The creature hits you for ${creatureDamage}`);
-  console.log(`Your health points are now equal to ${playerLife}\n`);
+  console.log(`The creature hit you for ${creatureDamage} damage!`);
+  console.log(`Your health points are now equal to ${playerLife}`);
+
   if (playerLife <= 0) {
     console.log(`\nYou have died!  The world mourns and statues are erected to the memory of Master ${name}\nThe End\n
                                                             
                                                           
     _ _                                                   
--/~/ / ~|                       :;                |       ()())/())
+-/~/ / ~|                        /|                |      ()())/())
 || | | /| ;|                     |l      _____     |;     ( V   | )
-_V)VV/ ;;;                       8o __-~     ~|   d|      |    /  /
-///(())(__/~;;|                  "88p;.  -. _L;.oP        (_/_/ /
-(((__   __ V   |                   >,% (|  (|./)8"         ;:'  i
+_V)VV/ ;;;                       8o __-~     ~|;  ;d|      |    /  /
+///(())(__/~;;|                  "88p;.  -. __. P'        (_/_/ /
+(((__   __ V   |                   >,% (|  (.o.)8"         ;:'  i
 )))--.'-- (( ;,8 |               ,;%%%:  ./V^^^V'          ;.   ;.
 ((|   |   /)) .,88   : ..,,;;;;,-::::::'_::|   |||         ;[8:  |
-)|  ~-~  |(|(888; ..'''::::8888oooooo.  :L^^^/,,~--._     |88::  |
+)|  ~-~   |( |(888; ..'''::::8888oooooo.  :L^^^/,,~--._     |88::  |
 || -===- /|  |8;; '':.      oo.8888888888: ((( o.ooo8888Oo;:;:'  |
 |_~-___-~_|    -L             o 88888888b  )) 888b88888P""'     ;
 ; ~~~~;~~         " --_ .       b 888888888;(.,"888b888"  ..::;-'
-;      ;              ~"-....  b 8888888:::::. 8888. .:;;;''
-;    ;                  :::.  :::OOO:::::::. OO' ;;;''
-:       ;                    .      "  ::::::''    .'
+;   ;  ;              ~"-....  b 8888888:::::. 8888. .:;;;''
+ ;    ;                  :::.  :::OOO:::::::. OO' ;;;''
+    ;  ;                    .      "  ::::::''    .'
  ;                           .   L              /
-;       ;                    +:   ~~--   :'  -';
- :                           ;;     L    : .::/  
+;    ;  ;                    +:   ~~--   :'  -';
+ ;  ;                        ;;     L    : .::/  
 ;                            ;;+_  :::. :..;;;  
                              ;;;;;;,;;;;;;;;,;`);
     ifDead = true;
@@ -137,9 +197,9 @@ _V)VV/ ;;;                       8o __-~     ~|   d|      |    /  /
 /////////Run from function//////
 
 function runFrom(monster) {
-  const randNum = Math.floor(Math.random() * 3);
+  const randNum = Math.floor(Math.random() * 2);
   if (randNum >= 1) {
-    console.log(`You attempt to flee but the creature hits you!`);
+    console.log(`You attempt to flee but you trip on your mage robe...`);
     dmgTaken(monster);
   } else {
     console.log("You run away sucseccfully");
@@ -158,8 +218,8 @@ function displayInv() {
 function addToInv() {
   const randNum = Math.floor(Math.random() * 9);
   console.log(`\nThe creature dropped ${randNum} gold!\n`);
-  player.inventory.goldPieces = player.inventory.goldPieces + randNum;
-  displayInv();
+  player.inventory.goldPieces += randNum;
+  // displayInv();
 }
 
 //////GAMEPLAY//////
@@ -192,6 +252,7 @@ const name = readline.question(
 );
 
 console.log(`Wizard ${name} your current health level is ${player.health}`);
+console.log(`Wizard ${name} your current mana level is ${player.mana}`);
 
 while (!ifDead) {
   if (playerLife <= 0) {

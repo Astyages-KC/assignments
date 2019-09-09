@@ -1,0 +1,132 @@
+*  {
+margin: 0; 
+padding: 0; 
+}
+
+div {
+    display: grid;
+    grid: repeat(6, 1fr)
+
+}
+
+#box1 {
+    display: grid;
+    height: 300px;
+    width: 150px;
+    background-color: #3339;
+    position: absolute; 
+    left: 150px;
+    top: 50px
+}
+
+#box1:hover {
+    background-color: red; 
+    border-radius: 50%; 
+    height: 400px; 
+}
+
+#box2 {
+    display: grid;
+    height: 400px; 
+width: 400px; 
+position: absolute; 
+left: 600px; 
+top: 50px; 
+background-color: blue; 
+transition-property: background-color, border-radius, height; 
+transition-duration: 1s; 
+transition-timing-function: linear; 
+transition-delay: 500ms; 
+transition: background-color, border-raidus, height, 3s cubic-bezier(0, 1.29, 0.43, 1.75); 
+}
+
+#box2:hover {
+background-color: red; 
+border-radius: 50%; 
+height: 400px;
+}
+
+#box3 {
+height: 500px;
+width: 500px;
+position: absolute;
+left: 300px;
+top: 300px;
+background-color: brown;
+border-radius: 40%;
+transition-property: background-color, border-radius, height; 
+transition-duration: 1s; 
+transition-timing-function: linear; 
+transition-delay: 500ms; 
+transition: background-color, border-raidus, height, 3s cubic-bezier(0, 1.5, 0.43, 2); 
+}
+
+#box3:hover {
+height: 50px;
+background-color: blue; 
+
+}
+
+#box4 {
+grid-row-gap: 1px;
+grid-column-gap: 9px;
+height: 500px;
+width: 500px;
+position: absolute;
+left: 300px;
+top: 300px;
+background-color: brown;
+border-radius: 40%;
+
+}
+
+#box4:hover {
+    background-color: blue; 
+transition-property: background-color, border-radius, height; 
+transition-duration: 1s; 
+transition-timing-function: linear; 
+transition-delay: 500ms; 
+transition: background-color, border-raidus, height, 3s cubic-bezier(0, 1.29, 0.43, 1.75); 
+}
+
+#box5 {
+grid-row-gap: 1px;
+grid-column-gap: 9px;
+height: 500px;
+width: 500px;
+position: absolute;
+left: 300px;
+top: 300px;
+background-color: brown;
+border-radius: 40%;
+}
+
+#box:hover {
+    background-color: blue; 
+    transition-property: background-color, border-radius, height; 
+    transition-duration: 1s; 
+    transition-timing-function: linear; 
+    transition-delay: 500ms; 
+    transition: background-color, border-raidus, height, 3s cubic-bezier(0, 1.29, 0.43, 1.75); 
+}
+
+#box6 {
+grid-row-gap: 1px;
+grid-column-gap: 9px;
+height: 500px;
+width: 500px;
+position: absolute;
+left: 300px;
+top: 300px;
+background-color: brown;
+border-radius: 40%;
+}
+
+#box6:hover {
+    background-color: blue; 
+    transition-property: background-color, border-radius, height; 
+    transition-duration: 1s; 
+    transition-timing-function: linear; 
+    transition-delay: 500ms; 
+    transition: background-color, border-raidus, height, 3s cubic-bezier(0, 1.29, 0.43, 1.75); 
+}
