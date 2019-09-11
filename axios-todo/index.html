@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Axios</title>
+    <link href="https://fonts.googleapis.com/css?family=Amiri|Permanent+Marker|Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="todoList">
+        <form id="form">Post a new ToDo:<br>
+            <input placeholder="Title" type="text" name="title"/>
+            <input placeholder="Description" type="text" name="description"/>
+            <input placeholder="Price" type="number" name="price"/>
+            <input placeholder="Image Url" type="text" name="image"/>
+            <button>Submit</button>
+        </form>
+            <br>
+        <form id="enterId"> Update a ToDo:
+            <input placeholder="ID number" type="text" name="idNum2"/>
+            <button>Enter ID</button>
+        </form>
+
+        <form id="form2"><br>
+            <input placeholder="Title" type="text" name="title"/>
+            <input placeholder="Description" type="text" name="description"/>
+            <input placeholder="Price" type="number" name="price"/>
+            <input placeholder="Image Url" type="text" name="image"/>
+            <br>Click the checkbox and press submit to make the changes
+            <br>
+            <input type="checkbox" id="putbox"/>Is this todo complete?
+            <input type="submit" value="Submit" /><br><br><br>
+            <br>
+        </form>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="app.js"></script>
+        
+</body>
+</html>

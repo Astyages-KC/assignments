@@ -3,10 +3,13 @@ margin: 0;
 padding: 0; 
 }
 
+@keyframes blink { 
+    50% { border-color: #ff0000; } 
+ }
+
 div {
     display: grid;
     grid: repeat(6, 1fr)
-
 }
 
 #box1 {
@@ -15,15 +18,21 @@ div {
     width: 150px;
     background-color: #3339;
     position: absolute; 
-    left: 150px;
-    top: 50px
+    left: 250px;
+    top: 150px;
+    border: 18px double grey;
 }
 
 #box1:hover {
-    background-color: red; 
+    background-color: rgb(17, 139, 68); 
     border-radius: 50%; 
+    border: 10px groove greenyellow;
     height: 400px; 
+    width: 300px;
+    filter: invert(100%);
+    transition-delay: 500ms; 
 }
+
 
 #box2 {
     display: grid;
@@ -32,27 +41,31 @@ width: 400px;
 position: absolute; 
 left: 600px; 
 top: 50px; 
-background-color: blue; 
+border: 10px inset rgb(8, 8, 231);
+background-color: rgb(29, 195, 207); 
 transition-property: background-color, border-radius, height; 
 transition-duration: 1s; 
 transition-timing-function: linear; 
-transition-delay: 500ms; 
-transition: background-color, border-raidus, height, 3s cubic-bezier(0, 1.29, 0.43, 1.75); 
+transition-delay: 200ms; 
+transition: background-color, border-raidus, height, 3s cubic-bezier(.14,.94,.67,.24); 
+
 }
 
 #box2:hover {
-background-color: red; 
+background-color: rgb(6, 8, 7); 
 border-radius: 50%; 
+border:12px outset lightslategray;
 height: 400px;
+transition: background-color, border-raidus, height, 3s cubic-bezier(.74,.44,.37,.54); 
 }
 
 #box3 {
 height: 500px;
 width: 500px;
 position: absolute;
-left: 300px;
-top: 300px;
-background-color: brown;
+left: 500px;
+top: 500px;
+background-color: green;
 border-radius: 40%;
 transition-property: background-color, border-radius, height; 
 transition-duration: 1s; 
@@ -70,23 +83,25 @@ background-color: blue;
 #box4 {
 grid-row-gap: 1px;
 grid-column-gap: 9px;
-height: 500px;
-width: 500px;
+height: 600px;
+width: 700px;
 position: absolute;
-left: 300px;
-top: 300px;
-background-color: brown;
-border-radius: 40%;
+left: 1000px;
+top: 200px;
+background-color: pink;
+border-radius: 10px 150px;
 
 }
 
 #box4:hover {
-    background-color: blue; 
+    background-color: rgb(206, 57, 114); 
+    border-radius: 70px 15px 45px;
 transition-property: background-color, border-radius, height; 
 transition-duration: 1s; 
 transition-timing-function: linear; 
-transition-delay: 500ms; 
-transition: background-color, border-raidus, height, 3s cubic-bezier(0, 1.29, 0.43, 1.75); 
+transition-delay: 100ms; 
+transition: background-color, border-raidus, height, 2s cubic-bezier(0, 1.29, 0.43, 1.75); 
+border: dashed 8px blueviolet;
 }
 
 #box5 {
@@ -95,38 +110,36 @@ grid-column-gap: 9px;
 height: 500px;
 width: 500px;
 position: absolute;
-left: 300px;
-top: 300px;
-background-color: brown;
+left: 900px;
+top: 800px;
+background-color: yellow;
 border-radius: 40%;
 }
 
-#box:hover {
-    background-color: blue; 
-    transition-property: background-color, border-radius, height; 
-    transition-duration: 1s; 
-    transition-timing-function: linear; 
-    transition-delay: 500ms; 
-    transition: background-color, border-raidus, height, 3s cubic-bezier(0, 1.29, 0.43, 1.75); 
+#box5:hover {
+    background-color: goldenrod; 
+    transition: margin-right 2s;
+    border: 20px dotted rebeccapurple;
+    animation: blink .5s step-end infinite alternate;
+
 }
 
 #box6 {
 grid-row-gap: 1px;
 grid-column-gap: 9px;
-height: 500px;
-width: 500px;
+height: 1500px;
+width: 200px;
 position: absolute;
-left: 300px;
-top: 300px;
-background-color: brown;
+left: 170px;
+top: 500px;
+background-color: rgb(247, 243, 243);
+box-shadow: 0 0 8px 8px rgba(207, 199, 210, .8) inset;
 border-radius: 40%;
 }
 
 #box6:hover {
-    background-color: blue; 
-    transition-property: background-color, border-radius, height; 
-    transition-duration: 1s; 
-    transition-timing-function: linear; 
-    transition-delay: 500ms; 
-    transition: background-color, border-raidus, height, 3s cubic-bezier(0, 1.29, 0.43, 1.75); 
+    background-color: rgb(37, 36, 36); 
+    width: 300px;
+    height: 1120px;
+   
 }

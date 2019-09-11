@@ -251,8 +251,9 @@ const name = readline.question(
   `You wake to the sound of a voice in your head. "Hello wizard!  Welcome to Darken Wood Forest. \nI have brought you here to test your magic skills.  Try to escape if you can...\n  By the way, what is your name?" `
 );
 
-console.log(`Wizard ${name} your current health level is ${player.health}`);
-console.log(`Wizard ${name} your current mana level is ${player.mana}`);
+console.log(`\t\tWizard ${name} your current health level is ${player.health}`);
+console.log(`\t\tWizard ${name} your current mana level is ${player.mana}`);
+
 
 while (!ifDead) {
   if (playerLife <= 0) {

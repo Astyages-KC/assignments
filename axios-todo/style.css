@@ -1,0 +1,65 @@
+/* font-family: 'Permanent Marker', cursive;
+font-family: 'Satisfy', cursive;
+font-family: 'Amiri', serif; */
+
+button {
+    font-family: 'Amiri', serif, 'Courier New', Courier, monospace;
+    font-size: 12px;
+    color: blue;
+}
+input {
+    font-family: 'Amiri', serif, 'Courier New', Courier, monospace;
+    font-size: 12px;
+    color: darkslateblue;
+    border: 4px inset black;
+}
+div {
+    font-family: 'Permanent Marker', cursive, 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: black;
+    border: 1px solid black;
+}
+
+#form {
+    border-bottom: 2px solid black;
+}
+
+h1 {
+    font-family: 'Satisfy', cursive, 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: green;
+    height: 20px;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+}
+
+#form {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#enterID {
+    margin-bottom: 30px;
+    padding: 10px;
+    border-top: 4px solid orangered;
+}
+
+
+#form2 {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#putbox {
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
