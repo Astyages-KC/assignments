@@ -23,10 +23,12 @@ function listToDOM(arr){
         h1.textContent = arr[i].title
         todoContainer.textContent = arr[i]._id
         para.textContent = arr[i].description
+        para.textContent = ("$" + arr[i].price)
         image.src = arr[i].imgUrl
         delBtn.textContent = "Delete"   
 
         delBtn.addEventListener("click", function() {
+        axios.delete("https://api.vschool.io/kevinclark/todo/" + arr[i]._id)
 
         })
         todoListContainer.appendChild(todoContainer)
@@ -81,26 +83,34 @@ form.addEventListener("submit", function(e) {
         })
     })
 
+    const form2 = document.getElementById("form2")
+    form2.addEventListener("submit", function(e) {
+        e.preventDefault()
+        const title2 = form2.title.value
+        const description2 = form2.description.value
+        const price2 = form2.price.value
+        const image2 = form2.image.value
+
     const newTodo2 = {
-        title: form2.title2,
-        description: form2.description,
-        price: form2.price,
-        imgUrl: form2.image
+        title: title2,
+        description: description2,
+        price: price2,
+        imgUrl: image2
         }
 
-        axios.get("https://api.vschool.io/kevinclark/todo/" + newTodo2)
+        axios.put("https://api.vschool.io/kevinclark/todo/" + idNum2, newTodo2)
         .then((response) => {
-            corm.addEventListener("submit", function(e) {
-                e.preventDefault()
-                const title = form2.title.value
-                const description = form2.description.value
-                const price = form2.price.value
-                const image = form2.image.value
         })
         .catch(error => {
-            console.log(error)
-        
+            console.log(error)   
     })
+})
+
+
+
+
+
+
 
     // console.log(idNum2)
         // const idDescrption = enterId.description.value
