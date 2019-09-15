@@ -1,6 +1,10 @@
 /* font-family: 'Permanent Marker', cursive;
 font-family: 'Satisfy', cursive;
 font-family: 'Amiri', serif; */
+body {
+    text-align: center;
+}
+
 
 button {
     font-family: 'Amiri', serif, 'Courier New', Courier, monospace;
@@ -63,3 +67,4 @@ img {
   -ms-user-select: none;
   user-select: none;
 }
+

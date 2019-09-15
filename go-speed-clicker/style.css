@@ -1,0 +1,39 @@
+body {
+    background-image: url("https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80");
+    border-image-width: auto;
+    background-size: contain;
+    
+}
+
+
+.goSpeedRacer {
+    width: 600px;
+    height: 600px;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+#speedy {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    margin:10px;
+    position: absolute;
+    left: 610px;
+    top: 242px;
+}
+
+#speedCount {
+    font-size: 50px;
+    font-color: black;
+    position: absolute;
+    left: 500px;
+    top: 190px;
+    border: 3px inset black;
+    height: 54px;
+    width: 80px;
+    text-align: center;
+}
+
