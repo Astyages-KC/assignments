@@ -1,0 +1,21 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.App {
+  text-align: center;
+}
+
+body {
+  text-align: center;
+}
+
+.vacationSpots {
+  background-color: lightblue;
+}
+
+h2 {
+  color: blue;
+  border-bottom: 3px dashed blue;
+}

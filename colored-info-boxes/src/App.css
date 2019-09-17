@@ -1,0 +1,9 @@
+.coloredBoxes {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  font-size: 25px;
+  color: black;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+

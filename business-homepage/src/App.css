@@ -1,0 +1,76 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.App {
+  background-color: lightpink;
+
+  /* grid-template-area:
+  "h"
+  "h"
+  "b"
+  "f" */
+}
+
+.mainTitle {
+  color:#7A66E8;
+  font-size: 35px;
+  height: 50px;
+  width: 300px;
+  padding-top: 8px;
+  border: 5px solid #7D8CFF;
+  border-radius: 15px 0px 0px 30px;
+  animation-duration: 5s;
+  animation-name: mainNameShake;
+}
+
+.navbar {
+  background-color: #70CCFF;
+  display: grid;
+  text-align: left;
+  padding: 20px;
+}
+
+.mainMenu {
+  background-color: #6697E8;
+  height: 150px;
+  width: 150px;
+  font-size: 18px;
+  list-style: none;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 30%;
+  margin-top: 10px;
+  padding-top: 10px;
+
+}
+
+img {
+  height: 300px;
+  width: auto;
+  text-align: center;
+}
+
+footer {
+  background-color: aqua;
+  text-align: center;
+}
+
+.listStuff {
+  text-align: center;
+  list-style: none;
+}
+
+
+@keyframes mainNameShake {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
