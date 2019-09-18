@@ -1,0 +1,133 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(https://images.unsplash.com/photo-1488998427799-e3362cec87c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
+    background-repeat: no-repeat center center;
+    background-attachment: scroll;
+    background-size: cover; 
+    height: 60vh;
+    width: 100%;
+    background-position: 0px -250px;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.overLay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(58, 57, 58, 0.5);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.startBootstrap {
+    font-size: 25px;
+    color: white;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    
+}
+.navContainer{
+    position:fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+
+}
+
+.navbarMenu {
+    list-style: none;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    width: 50vw;
+    justify-content: center;
+    
+}
+
+li {
+    padding-left: 30px;
+}
+
+.blogHeader1 {
+    color: white;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+
+}
+
+.blogHeader2 {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.blogTitle {
+    font-size: 36px;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: 800;
+}
+
+.blogSubtitle {
+    font-size: 28px;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.blogAuthor {
+    font-size: 18px;
+    font-family: Lora,'Times New Roman',serif;
+}
+
+.blogDate {
+    font-style: 18px;
+    font-family: Lora,'Times New Roman',serif;
+}
+
+.blogFooter {
+    margin: 20px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 18px;
+    border-top: 1px solid rgba(158, 157, 157, 0.5);
+}
+
+.blogPostcontainer { 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 150px;
+    padding-right: 150px;
+    justify-content: center;
+    align-items: center;    
+    border-bottom: 1px solid rgba(158, 157, 157, 0.5);
+}
+
+.olderPosts {
+    font-size: 14px;
+    font-weight: 800;
+    padding: 15px 25px;
+    margin-right: 60px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    float: right;
+    background-color: #0085a1;
+    border-color: #0085a1;
+}
+
+

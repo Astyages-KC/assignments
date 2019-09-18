@@ -27,12 +27,11 @@ let vacationSpots = [
 ]
 
 function App() {
-  
   return (
     <div className="vacationSpots">
       <h2>Choose a destination vacation!  </h2>
-      <Vacation 
-      spot={vacationSpots} 
+      <Vacation  // Vacation(spot)
+      vacationSpots={vacationSpots}
       />
       
     

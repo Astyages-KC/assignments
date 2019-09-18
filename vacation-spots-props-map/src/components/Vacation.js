@@ -2,14 +2,26 @@ import React from "react"
 
 
 function Vacation(props) {
-
+let i = -1;
+let color;
     return (
 
         <div>
             {
-                props.spot.map(p => {
+                
+                props.vacationSpots.map(p => {
+                    i += 1;
+                    if(p.timeToGo === "Spring") {
+                        color = 'green';
+                    } else if(p.timeToGo === "Summer") {
+                        color = 'yellow';
+                    } else if(p.timeToGo === "Winter") {
+                        color = 'brown';
+                    }  else if(p.timeToGo === "Fall") {
+                        color='orange';
+                    }
                     return (
-                    <div>
+                    <div style={{backgroundColor: color}} key={`spot-${i}`}>
                     <br/>
                     <h3>Vacation Spot: {p.place}</h3>
                     <p>Price: {p.price}</p>
@@ -21,5 +33,6 @@ function Vacation(props) {
         </div>
     )
 }
+                   
 
 export default Vacation

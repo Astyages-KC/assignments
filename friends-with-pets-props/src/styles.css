@@ -1,0 +1,18 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.friendStyle {
+    border: 3px solid black;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.petStyle {
+    border: 1px inset #FF8C0E;
+    font-family: 'Inconsolata', monospace;
+
+}
