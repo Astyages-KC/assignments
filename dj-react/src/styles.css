@@ -1,0 +1,91 @@
+.djReactMain { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+    height: 100vh;
+    width: auto;
+}
+
+.div1 { 
+        display: grid;
+        border: 2px inset black;
+} 
+
+.div2 { 
+    display: grid;
+    border: 2px outset black;
+
+} 
+
+.div3 { 
+    display: grid;
+    border: 2px inset black;
+
+} 
+
+.div4 { 
+    display: grid;
+    border: 2px inset black;
+
+} 
+
+.buttonDiv {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.bW {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    width: 20vw;
+    height: 50px;
+    border-radius: 10%;
+}
+
+.purpButton {
+    text-align: center;
+    background-color: purple;
+    color: white;
+    margin: 20px;
+    padding: 20px;
+    width: 20vw;
+    height: 50px;    
+    border-radius: 10%;
+}
+
+.bigTimeBlue {
+    text-align: center;
+    background-color: blue;
+    color: white;
+    margin: 20px;
+    padding: 20px;
+    width: 20vw;
+    height: 50px;
+    border-radius: 10%;
+}
+
+.bigTimeDj {
+    text-align: center;
+    background-color: red;
+    color: yellow;
+    margin: 20px;
+    padding: 20px;
+    width: 20vw;
+    height: 50px;
+    border-radius: 10%;
+}
+
+.muzic {
+    text-align: center;
+    background-color: rgb(233, 218, 6);
+    color: black;
+    margin: 20px;
+    padding: 20px;
+    width: 20vw;
+    height: 50px;
+    border-radius: 50%;
+}

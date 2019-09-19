@@ -1,0 +1,26 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    height: 250px;
+    width: auto;
+}
+
+.heroName {
+    font-size: 25px;
+    font-weight: 600;
+    border-bottom: 4px dashed lightcoral;
+    border-top: 4px inset grey;
+
+}
+
+.heroShow {
+font-size: 20px;
+}
+
+.heroPhrase{
+font-size: 20px;
+color: red;
+}

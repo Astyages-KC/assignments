@@ -1,0 +1,57 @@
+
+[
+    {
+        "name": "Dr Strange",
+        "show": "Doctor Strange",
+        "catchPhrase": "By the Eye of Agamotto!",
+        "imageName": "https://www.rarecomicbooks.fashionablewebs.com/Dr%20Strange/Dr%20Strange%20v2%209.jpg"
+    },
+    {
+        "name": "Green Lantern",
+        "show": "Justice League",
+        "catchPhrase": "In brightest day, in blackest night, no evil shall escape my sight. Let those who worship evil's might, beware my power, GREEN LANTERN'S LIGHT!",
+        "imageName": "https://2.bp.blogspot.com/-sLXfzJ3Oovw/VhfvnoUk2CI/AAAAAAAAC6Q/v-8tBwh_sRQ/s1600/Green%2BLantern%2B%2528Comics%2529%2BCover.jpg"
+    },
+    {
+        "name": "Black Panther",
+        "show": "Black Pather",
+        "catchPhrase": "WAKANDA FOREVER!",
+        "imageName": "https://buybigbang.com/wp-content/uploads/2016/04/IMG_1466-e1461247775149.jpg"
+    },
+    {
+        "name": "Iron Fist",
+        "show": "Iron Fist",
+        "catchPhrase": "I am the Iron Fist. I hold back the storm when nothing else can.",
+        "imageName": "https://vignette.wikia.nocookie.net/marveldatabase/images/0/05/Iron_Fist_Vol_1_13.jpg/revision/latest?cb=20110312190255"
+    },
+    {
+        "name": "Spider Man",
+        "show": "Infinity War",
+        "catchPhrase": "Coming from your friendly neighborhood Spider-Man!",
+        "imageName": "https://images-na.ssl-images-amazon.com/images/I/81kYNSnnz2L.jpg"
+    },
+    {
+        "name": "Master of Kung Fu",
+        "show": "none",
+        "catchPhrase": "Call me Shang-Chi",
+        "imageName": "https://storage.googleapis.com/hipcomic/p/c9d36bffdd663d8966f1df7986d53922-800.jpg"
+    },
+    {
+        "name": "Foolkiller",
+        "show": "None",
+        "catchPhrase": "Live a poem or die a fool.",
+        "imageName": "https://i.pinimg.com/originals/b0/6f/d1/b06fd1cd1bb733da8fdbc5fedd713c46.jpg"
+    },
+    {
+        "name": "Wanda the Witch",
+        "show": "Infinity Wars",
+        "catchPhrase": "I can't control their fear, only my own",
+        "imageName": "https://images-na.ssl-images-amazon.com/images/I/71ivEBG-F%2BL.jpg"
+    },
+    {
+        "name": "Hulk",
+        "show": "Infinity Wars",
+        "catchPhrase": "Hulk Smash!!!",
+        "imageName": "https://www.sellmycomicbooks.com/images/defenders-10.png"
+    }
+    ]
