@@ -1,0 +1,121 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+input {
+    justify-self: center;
+}
+
+.inputFormbox {
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-top:50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(6, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.firstNamebox {
+    color: black;
+    font-size: 15px;
+    border: 5 solid black;
+    background-color: aquamarine;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 15vw;
+    margin: 20px;
+}
+
+.lastNamebox {
+    color: black;
+    font-size: 15px;
+    border: 5 solid black;
+    background-color: aquamarine;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    width: 15vw;
+    margin: 20px;
+
+}
+
+.emailBox {
+    color: black;
+    font-size: 15px;
+    border: 5 solid black;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 15vw;
+    margin: 20px;
+
+}
+
+.placeBirthbox {
+    color: black;
+    font-size: 15px;
+    border: 5 solid black;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 15vw;
+    margin: 20px;
+}
+
+.phoneNumberbox {
+    color: black;
+    font-size: 15px;
+    border: 5 solid black;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 15vw;
+    margin: 20px;
+}
+
+.favoriteFoodbox{
+    color: black;
+    font-size: 15px;
+    border: 5 solid black;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 15vw;
+    margin: 20px;
+}
+
+.aboutYourselfbox {
+    color: black;
+    font-size: 15px;
+    border: 5 solid black;
+    background-color: aquamarine;
+    display: grid;
+    grid-area: 4 / 1 / 6 / 3; 
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 50vw;
+    height: 8vw;
+    margin: 30px;
+}
+
+button {
+    width: 10vw;
+    border: 1px inset black;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
