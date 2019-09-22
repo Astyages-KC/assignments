@@ -26,16 +26,19 @@ handleChange = (e) => {
 
 handleSubmit = (e) => {
   e.preventDefault()
-  const newfirstName = this.state.firstName
-  const newlastName = this.state.lastName
-  const newEmail = this.state.email
-  const newplaceOfbirth = this.state.placeOfbirth
-  const newphoneNumber = this.state.phoneNumber
-  const newfavoriteFood = this.state.favoriteFood
-  const newaboutYourself = this.state.aboutYourself
-
+  const firstName = this.state.firstName
+  const lastName = this.state.lastName
+  const email = this.state.email
+  const placeOfbirth = this.state.placeOfbirth
+  const phoneNumber = this.state.phoneNumber
+  const favoriteFood = this.state.favoriteFood
+  const aboutYourself = this.state.aboutYourself
+  const object = {
+    firstName, lastName, email, placeOfbirth, phoneNumber, favoriteFood, aboutYourself
+  }
+  console.log(object)
   this.setState(prevState => ({
-    info: [...prevState.info, newfirstName, newlastName, newEmail, newplaceOfbirth, newphoneNumber, newfavoriteFood, newaboutYourself],
+    info: [object, ...prevState.info],
     firstName: "",
     lastName: "",
     email: "",
@@ -47,7 +50,7 @@ handleSubmit = (e) => {
 }
 
 render(){
-
+console.log(this.state)
   return (
     <div>
       <NameBadge
@@ -62,7 +65,7 @@ render(){
         aboutYourself={this.state.aboutYourself} />
         <div>
           { this.state.info.map((info, i) => 
-          <Info {...info} key={i} /> ) }
+          <Info {...info} key={i} indexnum={i+1} /> ) }
         </div>
     </div>
     )

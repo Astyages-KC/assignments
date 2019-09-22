@@ -4,15 +4,14 @@ const Info = props => {
     const { firstName, lastName, email, placeOfbirth, phoneNumber, favoriteFood, aboutYourself } = props
 
     return (
-        <div style={{border: "1px solid black",
-    padding: 5, margin: 5}}>
-            <h3>First Name: {firstName}</h3>
-            <p>Last Name: {lastName}</p>
-            <p>Email: {email}</p>
-            <p>Place of Birth: {placeOfbirth}</p>
-            <p>Phone Number: {phoneNumber}</p>
-            <p>Favorite Food: {favoriteFood}</p>
-            <p>About: {aboutYourself}</p>
+        <div className="outputFormbox"><br />
+        <p className="badge" style={{backgroundColor: props.indexnum % 2 === 0 ? "red" : "blue"}}>Badge:</p>
+            <p className="outputName">Name: {firstName} {lastName}</p>
+            <p className="outputphoneNumber">Phone Number: {phoneNumber}</p>
+            <p className="outputplaceOfbirth">Place of Birth: {placeOfbirth}</p>
+            <p className="outputfavoriteFood">Favorite Food: {favoriteFood}</p>
+            <p className="outputemail">Email: {email}</p><br />
+            <p className="outputaboutYou">{aboutYourself}</p>
     </div>
     )
 }
