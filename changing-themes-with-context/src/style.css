@@ -1,0 +1,20 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.home-light {
+    background-color: aquamarine;
+    color: darkorchid;
+    border: 5px inset grey;
+    height: 400px;
+    width: auto;
+}
+
+.home-dark {
+    background-color: darkslategray;
+    color: yellowgreen;
+    border: 6px outset white;
+    height: 400px;
+    width: auto;
+}
