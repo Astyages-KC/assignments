@@ -1,0 +1,51 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.fancyAnimals {
+    font-family: 'Mansalva', cursive, monospace;
+    font-size: 40px;
+    border-top: 3px inset grey;
+    display: flex;
+    justify-content: center;
+}
+
+.fancyDescription {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    
+}
+.fancyPic {
+    width: auto;
+    height: 300px;
+     margin-left: 40px;
+     margin-bottom: 20px;
+     display: flex;
+    justify-content: center; 
+ }
+
+ .animalFormBox {
+     border: 3px solid red;
+     height: 50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ input {
+     font-size: 20px;
+     margin: 10px;
+ }
+
+ button {
+     font-size: 20px;
+     margin: 5px;
+ }
+
+ .editedThing {
+     margin-left: 5px;
+
+ }
