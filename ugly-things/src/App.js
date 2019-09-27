@@ -12,7 +12,7 @@ class App extends Component {
       title: "",
       description: "",
       imgUrl: ""
-    };
+    }
   }
 
   componentDidMount() {
@@ -39,10 +39,8 @@ class App extends Component {
       title: this.state.title,
       description: this.state.description,
       imgUrl: this.state.imgUrl
-    };
-
-    axios
-      .post("https://api.vschool.io/animalthings/todo", newAnimalThing)
+    }
+    axios.post("https://api.vschool.io/animalthings/todo", newAnimalThing)
       .then(res => {
         this.setState(prevState => ({
           animalThings: [...prevState.animalThings, res.data],
@@ -54,25 +52,8 @@ class App extends Component {
       .catch(error => console.log(error));
   };
 
-  // const editedArray = {
-  //   title: title2,
-  //   description: description2,
-  //   imgUrl: image2
-  // }
-
-  handleEdit = (id, editedThing) => {
-    axios.put("https://api.vschool.io/kevinclark/todo/" + id, editedThing)
-    .then((res) => {
-        console.log(res)
-      })
-      .catch(error => {
-        console.log(error)
-      })
-    }
-  
-
   handleDelete = id => {
-    axios.delete("https://api.vschool.io/kevinclark/todo/" + id)
+    axios.delete("https://api.vschool.io/animalthings/todo/" + id)
       .then(() => {
         this.setState(prevState => {
           const filteredArray = prevState.animalThings.filter(animalThing => {
@@ -83,6 +64,17 @@ class App extends Component {
       })
       .catch(error => console.log(error));
   };
+
+  handleEdit = (id, updates) => {
+    axios.put("https://api.vschool.io/animalthings/todo/" + id, updates)
+    .then((res) => {
+        this.setState(prevState => ({
+            animalThings: prevState.animalThings.map(thing => thing._id === id ? res.data : thing)
+        }))
+      })
+      .catch(error => console.log(error))
+    }
+
 
   render() {
     return (
@@ -100,7 +92,7 @@ class App extends Component {
           handleEdit={this.handleEdit}
         />
       </div>
-    );
+    )
   }
 }
-export default App;
+export default App

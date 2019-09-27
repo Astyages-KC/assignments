@@ -1,29 +1,30 @@
 import React from 'react'
 
 const AnimalThingForm = props => {
+    const { title, description, imgUrl, handleChange, handleSubmit } = props
     return(
-        <form className="animalFormBox" onSubmit={props.handleSubmit}>
+        <form className="animalFormBox" onSubmit={handleSubmit}>
             <input
             type="text"
             name="title"
-            value={props.title}
-            onChange={props.handleChange}
+            value={title}
+            onChange={handleChange}
             placeholder="Title"/>
             <input
             type="text"
             name="description"
-            value={props.description}
-            onChange={props.handleChange}
+            value={description}
+            onChange={handleChange}
             placeholder="description"/>
             <input
             type="text"
             name="imgUrl"
-            value={props.imgUrl}
-            onChange={props.handleChange}
+            value={imgUrl}
+            onChange={handleChange}
             placeholder="imgUrl"/>
             <button>Submit</button>
         </form>
-        
+
 
     
     )
