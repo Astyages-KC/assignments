@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import AgentPageForm from './components/AgentPageForm.js'
-import Home from './components/Home.js'
+import AgentPageForm from './components/AgentPageForm'
+import Home from './components/Home'
 
 
   class App extends Component {
@@ -27,14 +27,15 @@ import Home from './components/Home.js'
   render(){
     return(
       <div>
+        working
         <AgentPageForm 
         streetAddress={this.state.streetAddress}
         zipCode={this.state.zipCode}
         forRentorSale={this.state.forRentorSale}
         imgUrl={this.state.imgUrl}
         handleChange={this.handleChange}
-        />
-        <Home />
+        /> 
+       {/* <Home /> */}
       </div>
     )
   }

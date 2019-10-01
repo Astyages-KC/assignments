@@ -3,8 +3,12 @@ import React from 'react'
 
 const AgentPageForm = props => {
         return(
-
-<form>
+                <div>agent page working
+                <form>
+                        <input />
+                </form>
+                </div>
+/* <form>
           <input
           type="text"
           name="streetAddress"
@@ -38,7 +42,7 @@ const AgentPageForm = props => {
           placeholder="imgUrl" />
           <br />
           <button>Submit</button>
-        </form>
+        </form> */
         )
 }
 

@@ -1,0 +1,113 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    line-height: 1.2;
+    font-size: 25px;
+    font-family: cursive, Courier, monospace;
+    color: rgb(36, 26, 23);
+    background-color: rgba(207, 199, 210, 0.30)
+}
+
+.overlayAbout {
+    height: 100%;
+    width: 100%;
+    line-height: 1.2;
+    font-size: 25px;
+    font-family: cursive, Courier, monospace;
+    color: rgb(36, 26, 23);
+    background-color: rgba(207, 199, 210, 0.15)
+}
+
+.menuTop {
+    font-size: 25px;
+}
+
+.homePage {
+    background-image: url(https://i.imgur.com/0Z6wZmr.jpg);
+    height: 750px;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.homePageStuff {
+    padding: 20px;
+    text-align: center;
+    color: pink;
+    font-size: 30px;
+}
+
+.aboutPage {
+    background-image: url(https://wallpaperaccess.com/full/117930.jpg);
+    height: 850px;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.aboutPage2 {
+    color: white;
+}
+
+.charBuildPage {
+    background-image: url(https://media.dnd.wizards.com/styles/second_hubpage_banner/public/images/head-banner/03_NEW-TO-DnD_Races_Heroes_Hero_140725.jpg);
+    height: 750px;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: auto;
+    background-position: left top 150px;
+    
+}
+
+.radioButtons {
+    margin: 10px;
+}
+
+.homeLink {
+    color: white;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.aboutLink {
+    color: white;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.charBlink {
+    color: red;
+    margin-left: 7px;
+    margin-right: 7px;
+    padding: 2px;
+    border: 1px white solid;
+}
+
+.classChoices {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.raceChoices {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.classBox {
+    margin: 0px;
+    padding: 0px;
+}
+
+.raceBox {
+    margin: 0px;
+    padding: 0px;
+}
