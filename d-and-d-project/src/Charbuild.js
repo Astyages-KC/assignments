@@ -5,8 +5,8 @@ class Charbuild extends Component {
   constructor() {
     super();
     this.state = {
-      choosenclass: {},
-      choosenrace: {},
+      chosenClass: {},
+      chosenRace: {},
       race: "",
       class: "",
       classList: [],
@@ -20,11 +20,11 @@ class Charbuild extends Component {
       .then(res => {
         this.setState({
           classList: res.data.results
-        });
+        });       
       })
       .catch(err => console.log(err));
 
-      axios
+    axios
       .get("http://www.dnd5eapi.co/api/races/")
       .then(res => {
         this.setState({
@@ -40,18 +40,33 @@ class Charbuild extends Component {
     });
   };
 
-  handleSubmit = (e) => {
-    console.log(this.state)
-  }
+  handleSubmit = async () => {
+    try {
+      const raceData = await axios.get(this.state.race);
+      const classData = await axios.get(this.state.class);
+      this.setState({
+        chosenRace: raceData.data,
+        chosenClass: classData.data
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   render() {
+    console.log(this.state);
     const mappedClasses = this.state.classList.map(classItem => {
       console.log(this.state.classList);
       return (
         <div>
           {classItem.name}
-          {/* {classItem.url} */}
-          <input type="radio" name="class" onChange={this.handleChange} value={classItem.url} className='radioButtons'/>
+          <input
+            type="radio"
+            name="class"
+            onChange={this.handleChange}
+            value={classItem.url}
+            className="radioButtons"
+          />
         </div>
       );
     });
@@ -60,19 +75,62 @@ class Charbuild extends Component {
       return (
         <div>
           {raceItem.name}
-          {/* {classItem.url} */}
-          <input type="radio" name="race" onChange={this.handleChange} value={raceItem.url} className='radioButtons'/>
+          <input
+            type="radio"
+            name="race"
+            onChange={this.handleChange}
+            value={raceItem.url}
+            className="radioButtons"
+          />
         </div>
       );
     });
+    let mappedproficiencies;
+    if (this.state.chosenClass.proficiencies) {
+      mappedproficiencies = this.state.chosenClass.proficiencies.map(
+        proficiency => {
+          return <p className="profInfo"> {proficiency.name}, </p>;
+        }
+      );
+    }
+    let mappedsubclasses;
+    if (this.state.chosenClass.subclasses) {
+      mappedsubclasses = this.state.chosenClass.subclasses.map(subclass => {
+        return <p className="profInfo"> {subclass.name} </p>;
+      });
+    }
     return (
       <div className="charBuildPage">
         <div className="overlay">
-        <p className="classBox">Choose your class:</p>
-        <p className="classChoices">{mappedClasses}</p>
-        <p className="raceBox">Choose your race:</p>
-        <p className="raceChoices">{mappedRaces}</p>
-        <button onClick={this.handleSubmit}>Submit</button>
+          <div className="topMenustuff">
+            <p className="classBox">Choose your class:</p>
+            <div className="classChoices">{mappedClasses}</div>
+            <p className="raceBox">Choose your race:</p>
+            <div className="raceChoices">{mappedRaces}</div>
+            <button onClick={this.handleSubmit}>Submit</button>
+          </div>
+          <div className="showInfo">
+            <h2>Class: {this.state.chosenClass.name}</h2>
+            {/* <p className="profInfo">Proficiencies: </p> */}
+            {/* {this.state.chosenClass.proficiencies &&
+              this.state.chosenClass.proficiencies[0].name} */}
+            <div className="profInfo2">
+              Proficiencies: {mappedproficiencies}
+            </div>
+            <div className="profInfo2">Subclasses: {mappedsubclasses}</div>
+            {/* <h2>Subclasses: {this.state.chosenClass.name.subclasses}</h2> */}
+            <br />
+            <h2>Race: {this.state.chosenRace.name}</h2>
+            <p className="profInfo">
+              Alignment: {this.state.chosenRace.alignment}
+            </p>
+            <p className="profInfo">Age: {this.state.chosenRace.age}</p>
+            <p className="profInfo">
+              Size: {this.state.chosenRace.size_description}
+            </p>
+          </div>
+
+          {/* <ClassInfo {...this.state.chosenClass}/> */}
         </div>
       </div>
     );
@@ -80,23 +138,3 @@ class Charbuild extends Component {
 }
 
 export default Charbuild;
-
-/* <Container>
-<Row>
-  <Col>
-    <Form>
-      <Form.Group controlId="formBasicEmail">
-        <Form.Label>Build your character:</Form.Label>
-        <Form.Control  value={this.state.classChoice} onChange={this.handleChange} type="text" placeholder="ClassChoice" />
-        <Form.Control value={this.state.race} onChange={this.handleChange} type="input" placeholder="Race" />
-        <Form.Control value={props.state} onChange={props.handleChange} as="select">
-          <option value={this.state.classList}>Available Classes</option>
-      </Form.Group>
-      <Button onClick={this.handleSubmit} variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
-  </Col>
-  <Col></Col>
-</Row>
-</Container> */

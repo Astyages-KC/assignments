@@ -1,7 +1,13 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
+
+/* font-family: 'Handlee', cursive;
+font-family: 'Special Elite', cursive;
+font-family: 'Architects Daughter', cursive;
+font-family: 'Fredericka the Great', cursive; */
 
 .overlay {
     height: 100%;
@@ -9,8 +15,9 @@
     line-height: 1.2;
     font-size: 25px;
     font-family: cursive, Courier, monospace;
-    color: rgb(36, 26, 23);
-    background-color: rgba(207, 199, 210, 0.30)
+    color: rgb(82, 56, 60);
+    background-color: rgba(207, 199, 210, 0.50);
+
 }
 
 .overlayAbout {
@@ -19,8 +26,7 @@
     line-height: 1.2;
     font-size: 25px;
     font-family: cursive, Courier, monospace;
-    color: rgb(36, 26, 23);
-    background-color: rgba(207, 199, 210, 0.15)
+    background-color: rgba(232, 233, 224, 0.42);
 }
 
 .menuTop {
@@ -52,18 +58,30 @@
 }
 
 .aboutPage2 {
-    color: white;
+    color: rgb(141, 15, 36);
 }
 
 .charBuildPage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     background-image: url(https://media.dnd.wizards.com/styles/second_hubpage_banner/public/images/head-banner/03_NEW-TO-DnD_Races_Heroes_Hero_140725.jpg);
     height: 750px;
-    width: auto;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: contain;
     background-size: auto;
-    background-position: left top 150px;
+    background-position: bottom right;
+    object-fit: cover;
     
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 .radioButtons {
@@ -93,21 +111,59 @@
 .classChoices {
     display: flex;
     justify-content: center;
-   
+    color: rgb(88, 5, 19);   
 }
 
 .raceChoices {
     display: flex;
     justify-content: center;
-   
+    margin-bottom: 10px;
+    color: rgb(88, 5, 19);
 }
 
 .classBox {
     margin: 0px;
     padding: 0px;
+    margin-top: 10px;
+    text-decoration: underline;
+    /* text-align: center; */
+    color: rgb(194, 6, 37);
+}
+
+.profInfo {
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    /* padding-left: 8px; */
+    text-indent: 6px;
+    font-size: 23px;
+
+}
+
+.profInfo2 {
+    display: flex;
+    font-size: 23px;
 }
 
 .raceBox {
     margin: 0px;
     padding: 0px;
+    margin-top: 10px;
+    text-decoration: underline;
+    text-align: center;
+    color: rgb(194, 6, 37);
+}
+
+.showInfo {
+    font-family: 'Fredericka the Great', cursive; 
+    color: black;
+    font-size: 23px;
+    margin: 5px;
+    padding: 8px;
+}
+
+.topMenustuff > div {
+    display: flex;
+    flex-wrap: wrap;
+
 }

@@ -4,7 +4,7 @@ const Home = () => {
     return(
         <div className="homePage">
             <div className="overlay">
-            <p className="homePageStuff">This site is designed to help you build a character for D&D.  Click on the Character Builder Page and I'll display your info up here!</p>
+            <p className="homePageStuff">This site is designed to help you build a character for D&D.  Click on the Character Builder Page and I'll display your info!</p>
             </div>
         </div>
     )
