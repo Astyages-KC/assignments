@@ -54,15 +54,15 @@ class Home extends Component {
     });
 
     return (
+        <div>
       <div className="homePage">
-        <div className="overlayHome">
+        </div>
         <p>Which class do you want to know about?</p>
         <select value={this.state.selectedClass} onChange={this.handleChange}>
           {mappedDndClasses}
         </select>
         <p>{displayedClass && displayedClass.name}</p>
         <p>{displayedClass && displayedClass.desc}</p>
-        </div>
       </div>
     );
   }
