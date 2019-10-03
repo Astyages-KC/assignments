@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="aboutPage">
       <div className="overlayAbout">
-        <p className="aboutPage2">
+        <p className="scale-in-ver-top">
           Dungeons & Dragons (commonly abbreviated as D&D or DnD) is a fantasy
           tabletop role-playing game (RPG) originally designed by Gary Gygax and
           Dave Arneson. It was first published in 1974 by Tactical Studies

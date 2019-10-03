@@ -60,7 +60,7 @@ class ClassInfo extends Component {
         <select value={this.state.selectedClass} onChange={this.handleChange}>
           {mappedDndClasses}
         </select>
-        <p>{displayedClass && displayedClass.name}</p>
+        <p className="classInfoNameDisp">{displayedClass && displayedClass.name}</p>
         <p>{displayedClass && displayedClass.desc}</p>
         </div>
       </div>
