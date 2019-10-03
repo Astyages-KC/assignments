@@ -59,14 +59,14 @@ class Charbuild extends Component {
       console.log(this.state.classList);
       return (
         <div>
-          {classItem.name}
           <input
             type="radio"
             name="class"
             onChange={this.handleChange}
             value={classItem.url}
             className="radioButtons"
-          />
+            />
+            {classItem.name}
         </div>
       );
     });
@@ -74,14 +74,14 @@ class Charbuild extends Component {
       console.log(this.state.raceList);
       return (
         <div>
-          {raceItem.name}
           <input
             type="radio"
             name="race"
             onChange={this.handleChange}
             value={raceItem.url}
             className="radioButtons"
-          />
+            />
+            {raceItem.name}
         </div>
       );
     });
