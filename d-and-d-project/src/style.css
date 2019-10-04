@@ -27,10 +27,12 @@ font-family: 'Playfair Display', serif; */
     height: 100%;
     width: 100%;
     line-height: 1.2;
-    font-size: 25px;
+    font-size: 30px;
     padding: 10px;
     font-family: 'Grenze', serif, cursive, Courier, monospace;
-    background-color: rgba(207, 199, 210, 0.50);
+    background-color: rgba(207, 199, 210, 0.70);
+    -webkit-animation: text-shadow-pop-tr 1s both;
+            animation: text-shadow-pop-tr 1s both;
 
 }
 
@@ -58,22 +60,17 @@ font-family: 'Playfair Display', serif; */
 
 }
 
-.wizard {
-    display: grid;
-    height: 200px;
-    width: auto;
-    position: absolute;
-    left: 100px;
-    top: 300px;
-    
-}
 
 .classBox2 {
-    background-image: url(https://i.imgur.com/IIVTghJ.gif);
-    height: 100%;
-    width: 100%;
-    background-size: contain;
-    background-size: auto;
+    /* background-image: url(https://i.imgur.com/IIVTghJ.gif); */
+    /* background-size: contain;
+    background-size: auto; */
+    /* height: 100%;
+    width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(0, 128, 11);
     color: white;
 }
 
@@ -162,6 +159,7 @@ button {
     text-decoration: underline;
     text-align: center;
     color: rgb(194, 6, 37);
+    
 }
 
 .profInfo {
@@ -402,7 +400,63 @@ button {
     }
   }
 
+  .text-shadow-pop-tr {
+    -webkit-animation: text-shadow-pop-tr 1s both;
+            animation: text-shadow-pop-tr 1s both;
+  }
 
+
+  @-webkit-keyframes text-shadow-pop-tr {
+    0% {
+      text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
+      -webkit-transform: translateX(0) translateY(0);
+              transform: translateX(0) translateY(0);
+    }
+    100% {
+      text-shadow: 1px -1px #555555, 2px -2px #555555, 3px -3px #555555, 4px -4px #555555, 5px -5px #555555, 6px -6px #555555, 7px -7px #555555, 8px -8px #555555;
+      -webkit-transform: translateX(-8px) translateY(8px);
+              transform: translateX(-8px) translateY(8px);
+    }
+  }
+  @keyframes text-shadow-pop-tr {
+    0% {
+      text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
+      -webkit-transform: translateX(0) translateY(0);
+              transform: translateX(0) translateY(0);
+    }
+    100% {
+      text-shadow: 1px -1px #555555, 2px -2px #555555, 3px -3px #555555, 4px -4px #555555, 5px -5px #555555, 6px -6px #555555, 7px -7px #555555, 8px -8px #555555;
+      -webkit-transform: translateX(-8px) translateY(8px);
+              transform: translateX(-8px) translateY(8px);
+    }
+  }
+  
+
+  @media only screen and (max-width:47.5em) { 
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="mr-auto">
+      <Nav.Link href="#features">Features</Nav.Link>
+      <Nav.Link href="#pricing">Pricing</Nav.Link>
+      <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+      </NavDropdown>
+    </Nav>
+    <Nav>
+      <Nav.Link href="#deets">More deets</Nav.Link>
+      <Nav.Link eventKey={2} href="#memes">
+        Dank memes
+      </Nav.Link>
+    </Nav>
+  </Navbar.Collapse>
+</Navbar>
+  }
 
 /* @media (max-width: 760px) {
     .charBuildPage {

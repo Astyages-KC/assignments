@@ -12,8 +12,7 @@ const AppNavbar = () => {
           <Nav.Link href="/home">Home</Nav.Link>
           <Nav.Link href="/about">About</Nav.Link>
           <Nav.Link href="/charbuild">
-            Character Page
-          </Nav.Link>
+            Character Page</Nav.Link>
           <Nav.Link href="/classinfo">Class Info</Nav.Link>
         </Nav>
       </Navbar>
