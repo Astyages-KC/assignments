@@ -111,14 +111,10 @@ class Charbuild extends Component {
           </div>
           <div className="showInfo">
             <h2>Class: {this.state.chosenClass.name}</h2>
-            {/* <p className="profInfo">Proficiencies: </p> */}
-            {/* {this.state.chosenClass.proficiencies &&
-              this.state.chosenClass.proficiencies[0].name} */}
             <div className="profInfo2">
               Proficiencies: {mappedproficiencies}
             </div>
             <div className="profInfo2">Subclasses: {mappedsubclasses}</div>
-            {/* <h2>Subclasses: {this.state.chosenClass.name.subclasses}</h2> */}
             <br />
             <h2>Race: {this.state.chosenRace.name}</h2>
             <p className="profInfo">

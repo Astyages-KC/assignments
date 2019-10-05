@@ -46,10 +46,14 @@ font-family: 'Playfair Display', serif; */
 }
 
 .menuTop {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     font-size: 25px;
 }
 
 .homePage {
+  
     background-image: url(https://i.imgur.com/0Z6wZmr.jpg);
     height: 850px;
     width: auto;
@@ -91,7 +95,7 @@ font-family: 'Playfair Display', serif; */
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     background-image: url(https://media.dnd.wizards.com/styles/second_hubpage_banner/public/images/head-banner/03_NEW-TO-DnD_Races_Heroes_Hero_140725.jpg);
     height: 750px;
-    width: 100%;
+    width: auto;
     background-repeat: no-repeat;
     background-size: contain;
     background-size: auto;
@@ -107,6 +111,7 @@ button {
     text-align: center;
     margin: auto;
     margin-bottom: 20px;
+    padding: 5px;
     border: 1px solid black;
     border-radius: 10px;
     -webkit-animation: jello-horizontal 2s both;
@@ -168,13 +173,14 @@ button {
     justify-content: left;
     /* padding-left: 8px; */
     text-indent: 6px;
-    font-size: 23px;
+    font-size: 22px;
 
 }
 
 .profInfo2 {
     display: flex;
-    font-size: 23px;
+    justify-content: left;
+    font-size: 22px;
 }
 
 .raceBox {
@@ -433,29 +439,11 @@ button {
   
 
   @media only screen and (max-width:47.5em) { 
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-  <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="mr-auto">
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
-      <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown>
-    </Nav>
-    <Nav>
-      <Nav.Link href="#deets">More deets</Nav.Link>
-      <Nav.Link eventKey={2} href="#memes">
-        Dank memes
-      </Nav.Link>
-    </Nav>
-  </Navbar.Collapse>
-</Navbar>
+   .charBuildPage{
+     height: 350px;
+     width: auto;
+     background-image: url("");
+   }
   }
 
 /* @media (max-width: 760px) {
