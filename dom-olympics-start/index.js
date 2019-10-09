@@ -33,5 +33,24 @@ right[1].innerHTML = ""
 
 // var themeChange = document.getElementById("theme-drop-down")
 // if (themeChange === "theme-two") {
+    var background = document.getElementById(id).style.backgroundColor;
+    document.getElementsByClassName(right[0]).style.background = "red";
+    document.getElementsByClassName(left[1]).style.background = "black";
+
+    // function colorchange(id) {
+
+    //     var background = document.getElementById(id).style.backgroundColor;
+    //     if (background == "rgb(255, 145, 0)") {
+    //         document.getElementById(id).style.background = "rgb(26,255,0)";
+    //     } else {
+    //         document.getElementById(id).style.background = "rgb(255,145,0)";
+    //     }
+    
+    // }
+
+
+// element.classList.toggle("theme-two")
+
+
 //     themeChange.innerHTML = <option value="theme-two">red/black</option>
 // }
