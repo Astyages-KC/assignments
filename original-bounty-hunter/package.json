@@ -1,8 +1,8 @@
 {
-  "name": "my-first-server",
+  "name": "original-bounty-hunter",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "nodemon": "^1.19.3",
     "uuid": "^3.3.3"
   }
 }
