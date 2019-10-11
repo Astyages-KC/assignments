@@ -1,57 +1,16 @@
 const express = require('express')
 const app = express()
-const uuid = require('uuid/v4')
+const morgan = require('morgan')
 
-const todos = [
-    {
-    "name": "",  
-    "description": "",
-    "imageUrl": "",
-    "completed": false,
-    "_id": uuid()
-}
-]
 
-//middlewear
+
+//middlewear - turns the request body JSON into a JS object
+// makes it available in the request.body ( req.body )
 app.use(express.json())
+app.use(morgan("dev"))
 
-
-app.get ("/todos", (req, res) => {
-    res.send(todos)
-})
-
-app.get("/todos/:_id", (req, res) => {
-    const foundTodo = todos.find(todo => todo._id === req.params._id)
-    res.send(foundTodo)
-})
-
-app.post("/todos", (req, res) => {
-    const newTodo = req.body
-    newTodo._id = uuid()
-    todos.push(newTodo)
-    res.send(newTodo)
-})
-
-app.delete("/todos/:_id", (req, res) => {
-    const todoID = req.params._id
-    const todoIndexDelete = todos.findIndex(todo => todo._id === todoID)
-    console.log(todos[todoIndexDelete])
-    const todoName = todos[todoIndexDelete].name
-    
-    todos.splice(todoIndexDelete, 1)
-
-    res.send(`Successfully deleted ${todoName}`)
-})
-
-app.put("/todos/:_id", (req, res) => {
-    const todoID = req.params._id
-    const todoToUpdate = todos.find(todo => todo._id === todoID)
-    const todoIndexUpdate = todos.findIndex(todo => todo._id === todoID)
-    const  updateTodo = Object.assign(todoToUpdate, req.body)
-    todos.splice(todoIndexUpdate, 1, updateTodo)
-    res.send(updateTodo)
-
-})
+//Routes
+app.use("/todos", require('./routes/todoRouter.js'))
 
 
 app.listen(7000, () => {
