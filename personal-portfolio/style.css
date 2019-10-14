@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 /* a:visited {
@@ -36,7 +37,7 @@ font-family: 'Source Serif Pro', serif; */
     flex-direction: column;
     height: auto;
     width: 12vw;
-    font-size: 2vw;
+    font-size: 20px;
     padding: 1vw;
     border: 2px solid black;
     padding: 5px;
@@ -142,6 +143,24 @@ font-family: 'Source Serif Pro', serif; */
   padding: 30px;
 }
 
+/* .projectBG {
+ 
+    font-size: 150px;
+    white-space: nowrap;
+    animation: animation-name 5s infinite;
+    animation-timing-function: linear;
+}
+  
+  @keyframes animation-name {
+    0% {
+      transform: translateX(5%)
+    }
+    100% {
+      transform: translateX(-100%)
+    }
+  }
+} */
+
 .contactPage {
     background-image: url(https://images.unsplash.com/photo-1510936470381-68e4c0a5e24b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80);
     background-repeat: no-repeat;
@@ -151,13 +170,20 @@ font-family: 'Source Serif Pro', serif; */
 }
 
 .contactInfo {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     justify-content: center;
-    flex-direction: column;
+    align-content: center;
     text-align: center;
-    padding: 44vh;
     font-size: 20px;
     font-family: 'Muli', sans-serif;
+}
+
+.grid5 {
+  display: grid;
+  grid-column: 2 / 3;
+  padding-top: 20px;
 }
 
 .contactInfoUnderline {
@@ -239,9 +265,45 @@ font-family: 'Source Serif Pro', serif; */
     }
   }
   
-  @media only screen and (max-width:768px) {
+  /* @media screen and (max-width:768px) {
   body {
-    background-image: url(https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=698&q=80);
+    background-image: url(https://images.unsplash.com/photo-1496268280706-ec91c5e133c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80);
+  }
+  .navMenu {
+    width: 20vw;
   }
 }
 
+@media screen and (max-width: 1184px) {
+  .contactPage {
+    background-image: url(https://images.unsplash.com/photo-1496268280706-ec91c5e133c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80);
+  }
+} */
+
+ @media screen and (max-width: 420px) {
+  .navMenu {
+    width: 23vw;
+    font-size: 15px;
+  }
+  .aboutMe {
+    font-size: 15px;
+  }
+  .aboutSkills {
+    font-size: 18px;
+  }
+}
+
+ @media screen and (max-width:768px) {
+  body {
+    background-image: url(https://images.unsplash.com/photo-1496268280706-ec91c5e133c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80);
+  }
+  .navMenu {
+    width: 20vw;
+  }
+}
+
+ @media screen and (max-width: 1184px) {
+  .contactPage {
+    background-image: url(https://images.unsplash.com/photo-1496268280706-ec91c5e133c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80);
+  }
+} 
