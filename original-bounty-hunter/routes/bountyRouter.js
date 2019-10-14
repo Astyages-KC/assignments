@@ -1,13 +1,13 @@
 const express = require("express");
-const bountyRouter = express();
+const bountyRouter = express.Router();
 const uuid = require("uuid/v4");
 const Bounty = require("../models/bounty.js");
 
-bountyRouter.get("/", (req, res) => {
+bountyRouter.get("/", (req, res, next) => {
   Bounty.find((err, bounties) => {
     if (err) {
       res.status(500);
-      return res.send(err);
+      return next(err);
     }
     return res.status(200).send(bounties);
   });
@@ -23,31 +23,32 @@ bountyRouter.get("/:_id", (req, res) => {
   });
 });
 
-bountyRouter.post("/", (req, res) => {
+bountyRouter.post("/", (req, res, next) => {
   const newBounty = new Bounty(req.body);
   newBounty.save((err, newBounty) => {
     if (err) {
       res.send(500);
-      return res.send(err);
+      return next(err);
     }
   });
   return res.send(newBounty);
 });
 
-bountyRouter.delete("/:_id", (req, res) => {
+bountyRouter.delete("/:_id", (req, res, next) => {
   Bounty.findByIdAndRemove(req.params._id, (err, bounty) => {
     if (err) {
       res.status(500);
-      return res.send(err);
+      return next(err);
     }
     return res.send(bounty);
   });
 });
 
-bountyRouter.put("/:_id", (req, res) => {
+bountyRouter.put("/:_id", (req, res, next) => {
     Bounty.findByIdAndUpdate(req.params._id, req.body, {new: true}, (err, bounty) => {
         if(err) {
         res.status(500)
+        return next(err);
         }
         return res.send(bounty)
     });

@@ -139,27 +139,41 @@ font-family: 'Source Serif Pro', serif; */
   font-size: 20px;
 }
 
-.projectOne {
-  padding: 30px;
+.projectBG {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3px;
+    justify-content: center;
+    align-content: center;
+    
 }
 
-/* .projectBG {
- 
-    font-size: 150px;
-    white-space: nowrap;
-    animation: animation-name 5s infinite;
-    animation-timing-function: linear;
+.projectOne {
+  display: grid;
+  grid-column: 1 / 2;
+  height: 50vh;
+  padding: 10px;
+  background-color: #DB5A42;
+
 }
-  
-  @keyframes animation-name {
-    0% {
-      transform: translateX(5%)
-    }
-    100% {
-      transform: translateX(-100%)
-    }
-  }
-} */
+
+.projectTwo {
+  display: grid;
+  grid-column: 2 / 3;
+  height: 50vh;
+  padding: 10px;
+  background-color: green;
+}
+
+.projectThree {
+  display: grid;
+  grid-column: 3 / -1;
+  height: 50vh;
+  padding: 10px;
+  background-color: blue;
+}
+
+ 
 
 .contactPage {
     background-image: url(https://images.unsplash.com/photo-1510936470381-68e4c0a5e24b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80);
