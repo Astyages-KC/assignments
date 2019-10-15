@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 
-/* a:visited {
+a:visited {
     color: white;
-} */
+}
 
 /* font-family: 'Muli', sans-serif;
 font-family: 'Raleway', sans-serif;
@@ -98,10 +98,12 @@ font-family: 'Source Serif Pro', serif; */
 
 .resumePage {
   background-image: url("https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
-  height: 100vh;
   width: 100vw;
   color: #DB5A42;
   font-family: 'Raleway', sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 .resumeLink {
@@ -129,7 +131,7 @@ font-family: 'Source Serif Pro', serif; */
 }
 
 .projectsPage {
-  background-color: rgb(54, 146, 221);
+  background-image: url("https://images.unsplash.com/reserve/D0Ib5j36RymFSNPX5X1m_darkocean.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1510&q=80");
   height: 100vh;
   width: auto;
 }
@@ -145,7 +147,9 @@ font-family: 'Source Serif Pro', serif; */
     grid-gap: 3px;
     justify-content: center;
     align-content: center;
-    
+    font-family: 'Source Serif Pro', serif;
+    margin: 2px;
+    margin-top: 150px;
 }
 
 .projectOne {
@@ -153,8 +157,13 @@ font-family: 'Source Serif Pro', serif; */
   grid-column: 1 / 2;
   height: 50vh;
   padding: 10px;
-  background-color: #DB5A42;
+  background-color: #A9CCE8;
+  text-align: center;
+}
 
+.projectOneTitle, .projectTwoTitle, .projectThreeTitle {
+  font-size: 25px;
+  text-align: center;
 }
 
 .projectTwo {
@@ -162,7 +171,7 @@ font-family: 'Source Serif Pro', serif; */
   grid-column: 2 / 3;
   height: 50vh;
   padding: 10px;
-  background-color: green;
+  background-color: #BACEFF;
 }
 
 .projectThree {
@@ -170,7 +179,7 @@ font-family: 'Source Serif Pro', serif; */
   grid-column: 3 / -1;
   height: 50vh;
   padding: 10px;
-  background-color: blue;
+  background-color:#A9CCE8;
 }
 
  
@@ -305,6 +314,15 @@ font-family: 'Source Serif Pro', serif; */
   .aboutSkills {
     font-size: 18px;
   }
+  .myname {
+    font-size: 12px;
+  }
+  .homePageBanner {
+    font-size: 12px;
+  }
+  .resumeLink {
+    font-size: 20px;
+  }
 }
 
  @media screen and (max-width:768px) {
@@ -313,6 +331,12 @@ font-family: 'Source Serif Pro', serif; */
   }
   .navMenu {
     width: 20vw;
+  }
+  .projectBG {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .projectOne, .projectTwo, .projectThree {
+    grid-column: 1 / -1;
   }
 }
 
