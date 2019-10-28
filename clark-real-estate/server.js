@@ -4,11 +4,13 @@ const PORT = 7000;
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 
+// middleware for every request
 app.use(express.json());
 app.use(morgan('dev'));
 
 app.use('/clarkre', require('./routes/clarkReRouter.js'))
 
+//DB collection
 mongoose.connect('mongodb://localhost:27017/clarkredb',
 {
     useNewURLParser: true,
@@ -18,6 +20,7 @@ mongoose.connect('mongodb://localhost:27017/clarkredb',
 }, () => console.log("Connected to clarkRE DB")
 )
 
+//Global Error Handler
 app.use((err, req, res, next) => {
     console.log(err)
     return res.send({errMsg: err.message})

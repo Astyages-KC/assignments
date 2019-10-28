@@ -16,10 +16,11 @@ clarkReRouter.get("/", (req, res, next) => {
 //Get individual property
 clarkReRouter.get("/search", (req, res, next) => {
   for (let i in req.query) {
-    if (req.query[i] === "") {
+    if (req.query[i] === '') {
       delete req.query[i]
     }
   }
+
 
   Property.find(req.query, (err, property) => {
     if (err) {
@@ -44,7 +45,9 @@ clarkReRouter.post("/", (req, res, next) => {
 
 //Delete property
 clarkReRouter.delete("/:_id", (req, res, next) => {
-  Property.findOneAndRemove({ _id: req.params._id }, (err, property) => {
+  Property.findOneAndRemove(
+    { _id: req.params._id }, 
+    (err, property) => {
     if (err) {
       res.status(500);
       return next(err);
@@ -58,15 +61,14 @@ clarkReRouter.put("/:_id", (req, res, next) => {
   Property.findByIdAndUpdate(
     req.params._id,
     req.body,
-    { new: true },
+    {new: true},
     (err, property) => {
       if (err) {
         res.status(500);
         return next(err);
       }
       return res.status(201).send(property);
-    }
-  );
+    });
 });
 
 module.exports = clarkReRouter
