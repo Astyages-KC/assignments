@@ -4,7 +4,7 @@ import { UserContext } from "../context/UserProvider.js";
 
 function Auth() {
   const initState = { username: "", password: "" };
-  const { signup, login } = useContext(UserContext);
+  const { signup, login, authErrMsg, clearAuthErr } = useContext(UserContext);
   //state
   const [inputs, setInputs] = useState(initState);
   const [toggle, setToggle] = useState(false);
@@ -29,6 +29,11 @@ function Auth() {
     setInputs(initState);
   };
 
+  const toggleForms = () => {
+    setToggle(prevToggle => !prevToggle)
+    clearAuthErr()
+  }
+
   return (
     <div>
       {!toggle ? (
@@ -39,7 +44,8 @@ function Auth() {
             handleSubmit={handleSignupSubmit}
             btnText="Signup"
           />
-          <button onClick={() => setToggle(prevToggle => !prevToggle)}>
+          <p style={{color: 'blue'}}>{authErrMsg}</p>
+          <button onClick={toggleForms}>
             Already a member?
           </button>
         </>
@@ -51,7 +57,8 @@ function Auth() {
             handleSubmit={handleLoginSubmit}
             btnText="Login"
           />
-          <button onClick={() => setToggle(prevToggle => !prevToggle)}>Not a member?</button>
+          <p style={{color: 'red'}}>{authErrMsg}</p>
+          <button onClick={toggleForms}>Not a member?</button>
         </>
       )}
     </div>

@@ -15,7 +15,8 @@ function UserProvider(props) {
     user: JSON.parse(localStorage.getItem("user")) || {},
     token: localStorage.getItem("token") || "",
     posts: [],
-    userPosts: []
+    userPosts: [],
+    authErrMsg: ""
   };
   const [userState, setUserState] = useState(initState);
 
@@ -31,7 +32,7 @@ function UserProvider(props) {
             ...res.data
         }));
       })
-      .catch(err => console.log(err.response.data.errMsg));
+      .catch(err => handleAuthErr(err.response.data.errMsg));
   };
 
   const login = credentials => {
@@ -46,7 +47,7 @@ function UserProvider(props) {
             ...res.data
         }));
       })
-      .catch(err => console.log(err));
+      .catch(err => handleAuthErr(err.response.data.errMsg));
   };
 
   const logout = () => {
@@ -56,8 +57,23 @@ function UserProvider(props) {
          user: {},
          token: "",
          posts: [],
-        userPosts: []
+        userPosts: [],
+        authErrMsg: ""
      }) 
+  }
+
+  const handleAuthErr = errMsg => {
+    setUserState(prevUserState => ({
+      ...prevUserState,
+      authErrMsg: errMsg
+    }))    
+  }
+
+  const clearAuthErr = () => {
+    setUserState(prevUserState => ({
+      ...prevUserState,
+      authErrMsg: ""
+    }))
   }
 
     const getAllPosts = () => {
@@ -88,6 +104,8 @@ function UserProvider(props) {
         user: userState.user,
         token: userState.token,
         posts: userState.posts,
+        authErrMsg: userState.authErrMsg,
+        clearAuthErr: clearAuthErr,
         userPosts: userState.userPosts,
         signup: signup,
         login: login,
