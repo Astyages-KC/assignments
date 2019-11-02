@@ -28,6 +28,7 @@ propRouter.get('/user', (req, res, next) => {
 // Post
 propRouter.post('/', (req, res, next) => {
     req.body.user = req.user._id
+    req.body.username = req.user.username
     const newProperty = new Property(req.body)
     newProperty.save((err, savedProperty) => {
         if(err){

@@ -1,5 +1,6 @@
 import React, { useEffect, useContext, useState } from 'react';
 import {UserContext} from '../context/UserProvider';
+import Property from './Property.js';
 
 function AgentPage(){
     const { getAllPosts, posts } = useContext(UserContext)
@@ -13,8 +14,11 @@ function AgentPage(){
 
     return(
         <div>
-            Where are the posts?????
-            {posts.map((post, index) => <h1 key={index}>{post.city}</h1>)}
+            <h1 className='agentpageTop'>Your property list:</h1>
+            <div className='agentpageList'>
+            {posts.map((post, index) => <Property key={index} {...post}  />
+            )}
+            </div>
         </div>
     )
 }

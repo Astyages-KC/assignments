@@ -1,0 +1,18 @@
+* {
+    margin: 3px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.agentpageTop {
+    text-decoration: underline;
+}
+
+.agentpageList {
+    font-size: 20px;
+    border: 3px solid black;
+}
+
+.propertyBox {
+    border: 2px solid red;
+}

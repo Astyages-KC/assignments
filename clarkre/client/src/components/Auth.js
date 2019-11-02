@@ -4,10 +4,12 @@ import { UserContext } from "../context/UserProvider.js";
 
 function Auth() {
   const initState = { username: "", password: "" };
-  const { signup, login, authErrMsg, clearAuthErr } = useContext(UserContext);
+  const { login, authErrMsg, clearAuthErr } = useContext(UserContext);
   //state
   const [inputs, setInputs] = useState(initState);
-  const [toggle, setToggle] = useState(false);
+
+  // const [toggle, setToggle] = useState(false);
+  
   //handleChange
   const handleChange = e => {
     const { name, value } = e.target;
@@ -17,52 +19,48 @@ function Auth() {
     }));
   };
   //handleSubmits for signup and login
-  const handleSignupSubmit = e => {
-    e.preventDefault();
-    signup(inputs);
-    setInputs(initState);
-  };
+  // const handleSignupSubmit = e => {
+  //   e.preventDefault();
+  //   signup(inputs);
+  //   setInputs(initState);
+  // };
 
   const handleLoginSubmit = e => {
     e.preventDefault();
     login(inputs);
     setInputs(initState);
+    clearAuthErr();
   };
 
-  const toggleForms = () => {
-    setToggle(prevToggle => !prevToggle)
-    clearAuthErr()
-  }
+  // const toggleForms = () => {
+  //   setToggle(prevToggle => !prevToggle);
+  // };
 
   return (
     <div>
-      {!toggle ? (
-        <>
-          <AuthForm
-            inputs={inputs}
-            handleChange={handleChange}
-            handleSubmit={handleSignupSubmit}
-            btnText="Signup"
-          />
-          <p style={{color: 'blue'}}>{authErrMsg}</p>
-          <button onClick={toggleForms}>
-            Already a member?
-          </button>
-        </>
-      ) : (
-        <>
           <AuthForm
             inputs={inputs}
             handleChange={handleChange}
             handleSubmit={handleLoginSubmit}
             btnText="Login"
-          />
-          <p style={{color: 'red'}}>{authErrMsg}</p>
-          <button onClick={toggleForms}>Not a member?</button>
-        </>
-      )}
+            />
+          <p style={{ color: "red" }}>{authErrMsg}</p>
     </div>
   );
 }
+
+/* {!toggle ? ( 
+<button onClick={toggleForms}>Not a member?</button>
+) : (
+<>
+<AuthForm
+inputs={inputs}
+handleChange={handleChange}
+handleSubmit={handleSignupSubmit}
+btnText="Signup"
+/>
+<p style={{ color: "red" }}>{authErrMsg}</p>
+<button onClick={toggleForms}>Already a member?</button>
+</> */
 
 export default Auth;

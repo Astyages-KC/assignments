@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useState } from 'react';
 import {UserContext} from '../context/UserProvider';
 
-function Profile(){
+function ForRent(){
     const {getUserPosts, userPosts} = useContext(UserContext)
     const [firstAgentLoad, setFirstAgentLoad] = useState(true)
     useEffect(() => {
@@ -12,10 +12,10 @@ function Profile(){
     }, [getUserPosts, userPosts, firstAgentLoad])
     return(
         <div>
-         Profile page!!!!!!!   
+            For Rent!!!
             {userPosts.map((userPost, index) => <h1 key={index}>{userPost.city}</h1>)}
         </div>
     )
 }
 
-export default Profile
+export default ForRent

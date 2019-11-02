@@ -3,25 +3,29 @@ import Auth from "./components/Auth.js";
 import Home from "./components/Home.js";
 import Navbar from "./components/Navbar.js";
 import AgentPage from "./components/AgentPage.js";
-import Profile from "./components/Profile.js";
+import AboutUs from "./components/AboutUs.js";
+import ForRent from "./components/ForRent.js";
+import ForSale from "./components/ForSale.js";
 import ProtectedRoute from "./shared/ProtectedRoute.js";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { UserContext } from "./context/UserProvider.js";
+import './styles/style.css';
+import './styles/navbar.css';
+import './styles/authform.css';
+import './styles/agentpage.css';
+
 
 function App() {
   const { token, logout } = useContext(UserContext);
   return (
     <div>
-      {token && <Navbar logout={logout} />}
+      <Navbar token={token} logout={logout}/>
       <Switch>
-      <Route exact path="/" render={rProps => token ? 
-      <Redirect to="/agentpage/"/> : <Auth {...rProps} />} />
+      <Route exact path="/" render={rProps => <Home/>}/>
+      <Route path="/forsale" render={rProps => <ForSale/>}/>
+      <Route path="/forrent" render={rProps => <ForRent/>}/>
 
-        <ProtectedRoute 
-        path="/home" 
-        component={Home} 
-        redirectTo="/" 
-        />
+      <Route path='/auth' render={rProps => token ? <Redirect to="/agentpage/"/> : <Auth {...rProps} />} />
 
         <ProtectedRoute
           path="/agentpage"
@@ -30,8 +34,8 @@ function App() {
         /> 
  
         <ProtectedRoute 
-        path="/profile" 
-        component={Profile} 
+        path="/aboutus" 
+        component={AboutUs} 
         redirectTo="/" 
         /> 
       </Switch>
