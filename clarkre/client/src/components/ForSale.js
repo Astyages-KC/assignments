@@ -3,7 +3,7 @@ import {UserContext} from '../context/UserProvider';
 import Property from './Property.js';
 
 function ForSale(){
-    const {getUserPosts, userPosts} = useContext(UserContext)
+    const {getUserPosts, userPosts, posts} = useContext(UserContext)
     const [firstAgentLoad, setFirstAgentLoad] = useState(true)
     useEffect(() => {
         if(firstAgentLoad){
@@ -16,7 +16,7 @@ function ForSale(){
          For Sale!!!  
          <div className='agentpageList'>
             {posts.map((post, index) => <Property key={index} {...post}  />
-            )}
+            )}</div>
         </div>
     )
 }

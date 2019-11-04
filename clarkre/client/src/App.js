@@ -13,6 +13,7 @@ import './styles/style.css';
 import './styles/navbar.css';
 import './styles/authform.css';
 import './styles/agentpage.css';
+import PropertyForm from "./components/PropertyForm.js";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Route path="/forrent" render={rProps => <ForRent/>}/>
 
       <Route path='/auth' render={rProps => token ? <Redirect to="/agentpage/"/> : <Auth {...rProps} />} />
+      <Route path='/properyform' render={rProps => token ? <Redirect to="/propertyform/"/> : <PropertyForm {...rProps} />} />
 
         <ProtectedRoute
           path="/agentpage"
