@@ -18,7 +18,7 @@ const propertySchema = new Schema({
         type: Number,
         required: true
     },
-    forRentorSale: {
+    forRentOrSale: {
         type: String,
         enum: ['rent', 'sale']
     },

@@ -4,14 +4,14 @@ import Property from './Property.js';
 import { Link } from 'react-router-dom';
 
 function AgentPage(){
-    const { getAllPosts, posts } = useContext(UserContext)
+    const { getUserPosts, posts, userPosts } = useContext(UserContext)
     const [firstLoad, setFirstLoad] = useState(true)
     useEffect(() => {
         if(firstLoad){
-            getAllPosts()
+            getUserPosts()
             setFirstLoad(false)
         }
-    },[getAllPosts, posts, firstLoad])
+    },[getUserPosts, posts, firstLoad])
 
     return(
         <div>
@@ -19,7 +19,7 @@ function AgentPage(){
             <Link to='/propertyform' className='linkstyle'>add, edit or delete</Link>
             <h1 className='agentpageTop'>Your property list:</h1>
             <div className='agentpageList'>
-            {posts.map((post, index) => <Property key={index} {...post}  />
+            {userPosts.map((post, index) => <Property key={index} {...post}  />
             )}
             </div>
         </div>

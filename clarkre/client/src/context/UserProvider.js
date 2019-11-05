@@ -88,8 +88,8 @@ function UserProvider(props) {
     }
 
     const getUserPosts = () => {
-        userAxios.get('/api/posts/user')
-        .then(res => {
+      userAxios.get('/api/posts/user')
+      .then(res => {
             setUserState(prevUserState => ({
                 ...prevUserState,
                 userPosts: res.data
@@ -97,6 +97,15 @@ function UserProvider(props) {
         })
         .catch(err => console.log(err))
     }
+
+    const handleNewPost = (newPost) => {
+      userAxios.post(`/api/posts`, newPost)
+          .then(res => {
+              // console.log(res);
+              alert('Information entered!');
+          })
+          .catch(err => console.log(err.data)); 
+  }
 
   return (
     <UserContext.Provider
@@ -111,7 +120,16 @@ function UserProvider(props) {
         login: login,
         logout: logout,
         getAllPosts,
-        getUserPosts
+        getUserPosts,
+        handleNewPost,
+        inputs: {
+          streetAddress: "123 yellow",
+          city: 'da city',
+          state: 'da state',
+          zipCode: 'da zip',
+          forRentOrSale: 'da for rent or sale',
+          price: "1"
+        }
       }}
     >
       {props.children}
