@@ -16,7 +16,7 @@ function AgentPage(){
     return(
         <div>
             <h2>Agent options:</h2>
-            <Link to='/propertyform' className='linkstyle'>add, edit or delete</Link>
+            <Link to='/propertyform' className='linkstyle'>add</Link>
             <h1 className='agentpageTop'>Your property list:</h1>
             <div className='agentpageList'>
             {userPosts.map((post, index) => <Property key={index} {...post}  />

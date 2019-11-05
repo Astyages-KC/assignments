@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import axios from "axios";
 
 export const UserContext = React.createContext();
-const userAxios = axios.create()
+const userAxios = axios.create();
 
-userAxios.interceptors.request.use((config) => {
-    const token = localStorage.getItem('token')
-    config.headers.Authorization = `Bearer ${token}`
-    return config
-})
+userAxios.interceptors.request.use(config => {
+  const token = localStorage.getItem("token");
+  config.headers.Authorization = `Bearer ${token}`;
+  return config;
+});
 
 function UserProvider(props) {
   const initState = {
@@ -28,8 +28,8 @@ function UserProvider(props) {
         localStorage.setItem("user", JSON.stringify(user));
         localStorage.setItem("token", token);
         setUserState(prevUserState => ({
-            ...prevUserState,
-            ...res.data
+          ...prevUserState,
+          ...res.data
         }));
       })
       .catch(err => handleAuthErr(err.response.data.errMsg));
@@ -43,69 +43,81 @@ function UserProvider(props) {
         localStorage.setItem("user", JSON.stringify(user));
         localStorage.setItem("token", token);
         setUserState(prevUserState => ({
-            ...prevUserState,
-            ...res.data
+          ...prevUserState,
+          ...res.data
         }));
       })
       .catch(err => handleAuthErr(err.response.data.errMsg));
   };
 
   const logout = () => {
-     localStorage.removeItem('token')
-     localStorage.removeItem('user')
-     setUserState({
-         user: {},
-         token: "",
-         posts: [],
-        userPosts: [],
-        authErrMsg: ""
-     }) 
-  }
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    setUserState({
+      user: {},
+      token: "",
+      posts: [],
+      userPosts: [],
+      authErrMsg: ""
+    });
+  };
 
   const handleAuthErr = errMsg => {
     setUserState(prevUserState => ({
       ...prevUserState,
       authErrMsg: errMsg
-    }))    
-  }
+    }));
+  };
 
   const clearAuthErr = () => {
     setUserState(prevUserState => ({
       ...prevUserState,
       authErrMsg: ""
-    }))
-  }
+    }));
+  };
 
-    const getAllPosts = () => {
-        userAxios.get('/api/posts')
-            .then(res => {
-                setUserState(prevUserState => ({
-                    ...prevUserState,
-                    posts: res.data
-                }))
-            })
-            .catch(err => console.log(err))
-    }
-
-    const getUserPosts = () => {
-      userAxios.get('/api/posts/user')
+  const getAllPosts = () => {
+    userAxios
+      .get("/api/posts")
       .then(res => {
-            setUserState(prevUserState => ({
-                ...prevUserState,
-                userPosts: res.data
-            }))
-        })
-        .catch(err => console.log(err))
-    }
+        setUserState(prevUserState => ({
+          ...prevUserState,
+          posts: res.data
+        }));
+      })
+      .catch(err => console.log(err));
+  };
 
-    const handleNewPost = (newPost) => {
-      userAxios.post(`/api/posts`, newPost)
-          .then(res => {
-              // console.log(res);
-              alert('Information entered!');
-          })
-          .catch(err => console.log(err.data)); 
-  }
+  const getUserPosts = () => {
+    userAxios
+      .get("/api/posts/user")
+      .then(res => {
+        setUserState(prevUserState => ({
+          ...prevUserState,
+          userPosts: res.data
+        }));
+      })
+      .catch(err => console.log(err));
+  };
+
+  const handleNewPost = newPost => {
+    userAxios
+      .post(`/api/posts`, newPost)
+      .then(res => {
+        // console.log(res);
+        alert("Information entered!");
+      })
+      .catch(err => console.log(err.data));
+  };
+
+  const handleEdit = property => {
+    userAxios
+      .put(`/api/posts/{property._id}`, property)
+      .then(res => {
+        alert(res);
+      })
+      .catch(err => console.log(err.data));
+  };
 
   return (
     <UserContext.Provider
@@ -122,12 +134,13 @@ function UserProvider(props) {
         getAllPosts,
         getUserPosts,
         handleNewPost,
+        handleEdit,
         inputs: {
           streetAddress: "123 yellow",
-          city: 'da city',
-          state: 'da state',
-          zipCode: 'da zip',
-          forRentOrSale: 'da for rent or sale',
+          city: "da city",
+          state: "da state",
+          zipCode: "da zip",
+          forRentOrSale: "da for rent or sale",
           price: "1"
         }
       }}
@@ -137,4 +150,4 @@ function UserProvider(props) {
   );
 }
 
-export default UserProvider
+export default UserProvider;

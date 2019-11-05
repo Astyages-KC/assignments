@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { UserContext } from "../context/UserProvider.js";
-
+import { useParams } from 'react-router-dom';
 const initState = {
   streetAddress: "",
   city: "",
@@ -10,10 +10,18 @@ const initState = {
   price: ""
 };
 
-function PropertyForm() {
-  const { handleNewPost, userPosts } = useContext(UserContext);
 
-  const [inputs, setInputs] = useState(initState);
+function EditForm() {
+    const { handleEdit , userPosts } = useContext(UserContext);
+        let params = useParams();
+console.log(params);
+
+let property = userPosts.filter((prop) => {
+    return params._id == prop._id
+});
+property = property[0]
+console.log(property);
+  const [setInputs] = useState(initState);
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -25,7 +33,7 @@ function PropertyForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    handleNewPost(inputs);
+    handleEdit(property);
   };
 
   //Returning the Add form
@@ -39,7 +47,7 @@ function PropertyForm() {
           type="text"
           name="streetAddress"
           className="propertyForm"
-          value={inputs.streetAddress}
+          value={property.streetAddress}
           onChange={handleChange}
           placeholder="Address"
         />
@@ -49,7 +57,7 @@ function PropertyForm() {
           type="text"
           name="city"
           className="propertyForm"
-          value={inputs.city}
+          value={property.city}
           onChange={handleChange}
           placeholder="City"
         />
@@ -59,7 +67,7 @@ function PropertyForm() {
           type="text"
           name="state"
           className="propertyForm"
-          value={inputs.state}
+          value={property.state}
           onChange={handleChange}
           placeholder="State"
         />
@@ -69,7 +77,7 @@ function PropertyForm() {
           type="number"
           name="zipCode"
           className="propertyForm"
-          value={inputs.zipCode}
+          value={property.zipCode}
           onChange={handleChange}
           placeholder="Zipcode"
         />
@@ -97,13 +105,14 @@ function PropertyForm() {
           type="number"
           name="price"
           className="propertyForm"
-          value={inputs.price}
+          value={property.price}
           onChange={handleChange}
           placeholder="Price"
         /><br />
         <button>Submit</button>
         
       </form>
+      <div>{}</div>
       {
         //mapped editable/deletable listings
         //map through each property and return an 'edit property form',
@@ -114,4 +123,4 @@ function PropertyForm() {
   );
 }
 
-export default PropertyForm;
+export default EditForm;

@@ -7,6 +7,7 @@ import AboutUs from "./components/AboutUs.js";
 import ForRent from "./components/ForRent.js";
 import ForSale from "./components/ForSale.js";
 import PropertyForm from "./components/PropertyForm.js";
+import EditForm from "./components/EditForm.js";
 import ProtectedRoute from "./shared/ProtectedRoute.js";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { UserContext } from "./context/UserProvider.js";
@@ -29,6 +30,8 @@ function App() {
       <Route path='/auth' render={rProps => token ? <Redirect to="/agentpage/"/> : <Auth {...rProps} />} />
 
       <Route path='/propertyform' render={rProps => !token ? <Redirect to="/auth" /> : <PropertyForm />} />
+
+      <Route path='/editform/:_id' render={rProps => !token ? <Redirect to="/auth" /> : <EditForm />} />
 
         <ProtectedRoute
           path="/agentpage"
