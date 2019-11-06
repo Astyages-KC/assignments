@@ -17,7 +17,7 @@ function AgentPage() {
     <div>
       <h2>Agent options:</h2>
       <Link to="/propertyform" className="linkstyle">
-        add
+        Add a new property for rent or sale
       </Link>
       <h1 className="agentpageTop">Your property list:</h1>
       <div className="agentpageList">

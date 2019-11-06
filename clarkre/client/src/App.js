@@ -26,6 +26,7 @@ function App() {
       <Route exact path="/" render={rProps => <Home/>}/>
       <Route path="/forsale" render={rProps => <ForSale/>}/>
       <Route path="/forrent" render={rProps => <ForRent/>}/>
+      <Route path="/aboutus" render={rProps => <AboutUs/>}/>
 
       <Route path='/auth' render={rProps => token ? <Redirect to="/agentpage/"/> : <Auth {...rProps} />} />
 
@@ -45,11 +46,11 @@ function App() {
         redirectTo="/"
         /> */}
  
-        <ProtectedRoute 
+        {/* <ProtectedRoute 
         path="/aboutus" 
         component={AboutUs} 
         redirectTo="/" 
-        /> 
+        />  */}
       </Switch>
     </div>
   );
