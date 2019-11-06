@@ -11,7 +11,7 @@ const initState = {
 };
 
 function PropertyForm() {
-  const { handleNewPost, userPosts } = useContext(UserContext);
+  const { handleNewPost } = useContext(UserContext);
 
   const [inputs, setInputs] = useState(initState);
 

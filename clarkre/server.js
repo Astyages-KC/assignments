@@ -22,6 +22,7 @@ mongoose.connect('mongodb://localhost:27017/clarkdb',
 //Routes
 app.use('/auth', require('./routes/authRouter.js'))
 app.use('/public', require('./routes/publicRouter'))
+
 app.use("/api", expressJwt({secret: process.env.SECRET}))
 
 app.use('/api/posts', require('./routes/propRouter.js'))

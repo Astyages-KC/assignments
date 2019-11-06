@@ -1,30 +1,30 @@
 import React, { useState, useContext } from "react";
 import { UserContext } from "../context/UserProvider.js";
 import { useParams } from 'react-router-dom';
-const initState = {
-  streetAddress: "",
-  city: "",
-  state: "",
-  zipCode: "",
-  forRentOrSale: "",
-  price: ""
-};
+// const initState = {
+//   streetAddress: "",
+//   city: "",
+//   state: "",
+//   zipCode: "",
+//   forRentOrSale: "",
+//   price: ""
+// };
 
 
 function EditForm() {
-    const { handleEdit , userPosts } = useContext(UserContext);
+    const { handleEdit , handleDelete, userPosts } = useContext(UserContext);
         let params = useParams();
 console.log(params);
 
 let property = userPosts.filter((prop) => {
-    return params._id == prop._id
+    return params._id === prop._id
 });
-property = property[0]
-console.log(property);
-  const [setInputs] = useState(initState);
+
+  const [inputs, setInputs ] = useState(property[0]);
 
   const handleChange = e => {
-    const { name, value } = e.target;
+      const { name, value } = e.target;
+      console.log(inputs.streetAddress)
     setInputs(prevInputs => ({
       ...prevInputs,
       [name]: value
@@ -33,7 +33,16 @@ console.log(property);
 
   const handleSubmit = e => {
     e.preventDefault();
-    handleEdit(property);
+    console.log(inputs)
+    handleEdit(inputs);
+    alert ('Property Edited')
+  };
+
+  const handleDeleteSubmit = e => {
+    e.preventDefault();
+    console.log(inputs)
+    handleDelete(inputs);
+    alert ('Property Deleted')
   };
 
   //Returning the Add form
@@ -47,7 +56,7 @@ console.log(property);
           type="text"
           name="streetAddress"
           className="propertyForm"
-          value={property.streetAddress}
+          value={inputs && inputs.streetAddress}
           onChange={handleChange}
           placeholder="Address"
         />
@@ -57,7 +66,7 @@ console.log(property);
           type="text"
           name="city"
           className="propertyForm"
-          value={property.city}
+          value={inputs && inputs.city}
           onChange={handleChange}
           placeholder="City"
         />
@@ -67,7 +76,7 @@ console.log(property);
           type="text"
           name="state"
           className="propertyForm"
-          value={property.state}
+          value={inputs && inputs.state}
           onChange={handleChange}
           placeholder="State"
         />
@@ -77,7 +86,7 @@ console.log(property);
           type="number"
           name="zipCode"
           className="propertyForm"
-          value={property.zipCode}
+          value={inputs && inputs.zipCode}
           onChange={handleChange}
           placeholder="Zipcode"
         />
@@ -105,14 +114,14 @@ console.log(property);
           type="number"
           name="price"
           className="propertyForm"
-          value={property.price}
+          value={inputs && inputs.price}
           onChange={handleChange}
           placeholder="Price"
         /><br />
-        <button>Submit</button>
+        <button>Verify Edit</button>
         
       </form>
-      <div>{}</div>
+      <button onClick={handleDeleteSubmit}>Verify Delete</button>
       {
         //mapped editable/deletable listings
         //map through each property and return an 'edit property form',

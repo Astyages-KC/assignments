@@ -112,9 +112,18 @@ function UserProvider(props) {
 
   const handleEdit = property => {
     userAxios
-      .put(`/api/posts/{property._id}`, property)
+      .put(`/api/posts/${property._id}`, property)
       .then(res => {
-        alert(res);
+        console.log(res);
+      })
+      .catch(err => console.log(err.data));
+  };
+
+  const handleDelete = property => {
+    userAxios
+      .delete(`/api/posts/${property._id}`, property)
+      .then(res => {
+        console.log(res);
       })
       .catch(err => console.log(err.data));
   };
@@ -135,6 +144,7 @@ function UserProvider(props) {
         getUserPosts,
         handleNewPost,
         handleEdit,
+        handleDelete,
         inputs: {
           streetAddress: "123 yellow",
           city: "da city",
