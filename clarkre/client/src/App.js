@@ -11,10 +11,12 @@ import EditForm from "./components/EditForm.js";
 import ProtectedRoute from "./shared/ProtectedRoute.js";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { UserContext } from "./context/UserProvider.js";
-import './styles/style.css';
-import './styles/navbar.css';
-import './styles/authform.css';
 import './styles/agentpage.css';
+import './styles/authform.css';
+import './styles/home.css';
+import './styles/navbar.css';
+import './styles/property.css';
+import './styles/style.css';
 
 
 function App() {

@@ -26,14 +26,15 @@ function PropertyForm() {
   const handleSubmit = e => {
     e.preventDefault();
     handleNewPost(inputs);
+    setInputs(initState)
   };
 
   //Returning the Add form
   // and the list of editable/deletable listings
   return (
-    <div>
-      Property Form:
-      <form onSubmit={handleSubmit}>
+    <div className="property-add-box">
+      <p className='makeDisWorkRN'>Property Form</p>
+      <form onSubmit={handleSubmit} className="property-add-form">
         Street Address:
         <input
           type="text"
@@ -74,25 +75,8 @@ function PropertyForm() {
           placeholder="Zipcode"
         />
         <br />
-        Is the property for Rent or Sale?{" "}
-        <input
-          type="radio"
-          name="forRentOrSale"
-          className="propertyForm"
-          value={'rent'}
-          onChange={handleChange}
-          placeholder="Rent"
-        />
-        <input
-          type="radio"
-          name="forRentOrSale"
-          className="propertyForm"
-          value={'sale'}
-          onChange={handleChange}
-          placeholder="Sale"
-        />
+        Price:
         <br />
-        Price:{" "}
         <input
           type="number"
           name="price"
@@ -100,7 +84,34 @@ function PropertyForm() {
           value={inputs.price}
           onChange={handleChange}
           placeholder="Price"
+          /><br />
+          Is the property;<br/> for Rent?
+        <input
+          type="radio"
+          name="forRentOrSale"
+          className="propertyFormradio"
+          value={'rent'}
+          onChange={handleChange}
+          placeholder="Rent"
         /><br />
+        or Sale?
+        <input
+          type="radio"
+          name="forRentOrSale"
+          className="propertyFormradio"
+          value={'sale'}
+          onChange={handleChange}
+          placeholder="Sale"
+        />
+        <br />
+        
+        {/* <input
+          type="text"
+          name="imageUrl"
+          className="propertyForm"
+          value={inputs.imageUrl}
+          placeholder="Image Link"
+          /><br /> */}
         <button>Submit</button>
         
       </form>

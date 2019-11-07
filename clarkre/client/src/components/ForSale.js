@@ -16,7 +16,9 @@ function ForSale() {
   }, []);
 
   const mappedposts = posts.map((post, index) => (
-    <div key={index}>
+    <div key={index} className="propertyBox">
+      <div className="overlay-prop">
+      <div className="property-list-styling">
       <p>
         Address: {post.streetAddress}, {post.city}, {post.state} {post.zipCode}
       </p>
@@ -24,6 +26,8 @@ function ForSale() {
       <p>Price: {post.price}</p>
       <p>Listed on: {moment(post.createdOn).format("MMMM Do YYYY")}</p>
       <p>Created by: {post.username}</p>
+      </div>
+      </div>
     </div>
   ));
   return <div>{mappedposts}</div>;

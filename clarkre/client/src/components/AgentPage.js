@@ -14,12 +14,11 @@ function AgentPage() {
   }, [getUserPosts, posts, firstLoad]);
 
   return (
-    <div>
-      <h2>Agent options:</h2>
-      <Link to="/propertyform" className="linkstyle">
+    <div className="agentPageStyle">
+      <Link to="/propertyform" className="add-linkstyle">
         Add a new property for rent or sale
       </Link>
-      <h1 className="agentpageTop">Your property list:</h1>
+      <h1 className="agentpageTop">Your property list</h1>
       <div className="agentpageList">
         {userPosts.map((post, index) => (
           <Property key={index} {...post} />

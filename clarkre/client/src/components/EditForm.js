@@ -1,14 +1,14 @@
 import React, { useState, useContext } from "react";
 import { UserContext } from "../context/UserProvider.js";
 import { useParams } from 'react-router-dom';
-// const initState = {
-//   streetAddress: "",
-//   city: "",
-//   state: "",
-//   zipCode: "",
-//   forRentOrSale: "",
-//   price: ""
-// };
+const initState = {
+  streetAddress: "",
+  city: "",
+  state: "",
+  zipCode: "",
+  forRentOrSale: "",
+  price: ""
+};
 
 
 function EditForm() {
@@ -36,6 +36,7 @@ let property = userPosts.filter((prop) => {
     console.log(inputs)
     handleEdit(inputs);
     alert ('Property Edited')
+    setInputs(initState)
   };
 
   const handleDeleteSubmit = e => {
@@ -43,13 +44,14 @@ let property = userPosts.filter((prop) => {
     console.log(inputs)
     handleDelete(inputs);
     alert ('Property Deleted')
+    setInputs(initState)
   };
 
   //Returning the Add form
   // and the list of editable/deletable listings
   return (
-    <div>
-      Property Form:
+    <div className="property-add-box">
+      <p className='makeDisWorkRN'>Property Form</p>
       <form onSubmit={handleSubmit}>
         Street Address:
         <input
@@ -91,24 +93,6 @@ let property = userPosts.filter((prop) => {
           placeholder="Zipcode"
         />
         <br />
-        Is the property for Rent or Sale?{" "}
-        <input
-          type="radio"
-          name="forRentOrSale"
-          className="propertyForm"
-          value={'rent'}
-          onChange={handleChange}
-          placeholder="Rent"
-        />
-        <input
-          type="radio"
-          name="forRentOrSale"
-          className="propertyForm"
-          value={'sale'}
-          onChange={handleChange}
-          placeholder="Sale"
-        />
-        <br />
         Price:{" "}
         <input
           type="number"
@@ -118,10 +102,36 @@ let property = userPosts.filter((prop) => {
           onChange={handleChange}
           placeholder="Price"
         /><br />
-        <button>Verify Edit</button>
+        Is the property for Rent or Sale?{" "}
+        <input
+          type="radio"
+          name="forRentOrSale"
+          className="propertyFormradio"
+          value={'rent'}
+          onChange={handleChange}
+          placeholder="Rent"
+        />
+        <input
+          type="radio"
+          name="forRentOrSale"
+          className="propertyFormradio"
+          value={'sale'}
+          onChange={handleChange}
+          placeholder="Sale"
+        />
+        <br />
+        
+        {/* <input
+          type="text"
+          name="imageUrl"
+          className="propertyForm"
+          value={inputs.imageUrl}
+          placeholder="Image Link"
+          /><br /> */}
+        <button className='edit-form-linkstyle'>Verify Edit</button>
         
       </form>
-      <button onClick={handleDeleteSubmit}>Verify Delete</button>
+      <button onClick={handleDeleteSubmit} className='delete-form-linkstyle'>Verify Delete</button>
       {
         //mapped editable/deletable listings
         //map through each property and return an 'edit property form',
