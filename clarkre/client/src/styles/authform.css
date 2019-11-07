@@ -6,3 +6,9 @@
     font-size: 15px;
 }
 
+.auth-form {
+    padding: 20px;
+    padding-left: 50px;
+    font-size: 20px;
+    background-color: rgb(226, 214, 198);
+}

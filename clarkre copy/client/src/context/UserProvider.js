@@ -146,12 +146,12 @@ function UserProvider(props) {
         handleEdit,
         handleDelete,
         inputs: {
-          streetAddress: "123 yellowbrick rd",
-          city: "city",
-          state: "state",
-          zipCode: "zip",
-          forRentOrSale: "rent",
-          price: "10"
+          streetAddress: "123 yellow",
+          city: "da city",
+          state: "da state",
+          zipCode: "da zip",
+          forRentOrSale: "da for rent or sale",
+          price: "1"
         }
       }}
     >

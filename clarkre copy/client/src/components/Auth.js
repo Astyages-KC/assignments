@@ -37,7 +37,7 @@ function Auth() {
   // };
 
   return (
-    <div className="auth-form">
+    <div>
           <AuthForm
             inputs={inputs}
             handleChange={handleChange}
