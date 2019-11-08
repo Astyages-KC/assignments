@@ -151,7 +151,8 @@ function UserProvider(props) {
           state: "state",
           zipCode: "zip",
           forRentOrSale: "rent",
-          price: "10"
+          price: "10",
+          imageUrl: "link"
         }
       }}
     >

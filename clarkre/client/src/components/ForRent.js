@@ -26,6 +26,7 @@ function ForRent() {
       <p>Price: {post.price}</p>
       <p>Listed on: {moment(post.createdOn).format("MMMM Do YYYY")}</p>
       <p>Created by: {post.username}</p>
+      <img className="home-img" src={post.imageUrl} alt="logo" />
       </div>
       </div>
     </div>

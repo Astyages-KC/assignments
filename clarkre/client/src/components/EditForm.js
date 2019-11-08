@@ -120,14 +120,16 @@ let property = userPosts.filter((prop) => {
           placeholder="Sale"
         />
         <br />
-        
-        {/* <input
+        <br />
+        Image link:
+        <input
           type="text"
           name="imageUrl"
           className="propertyForm"
-          value={inputs.imageUrl}
+          value={inputs && inputs.imageUrl}
+          onChange={handleChange}
           placeholder="Image Link"
-          /><br /> */}
+          /><br />
         <button className='edit-form-linkstyle'>Verify Edit</button>
         
       </form>

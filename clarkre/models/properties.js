@@ -38,11 +38,11 @@ const propertySchema = new Schema({
     username: {
         type: String,
         required: true
+    },
+    imageUrl: {
+        type: String,
+        required: false
     }
-    // imageUrl: {
-    //     type: String,
-    //     required: false
-    // }
 });
 
 module.exports = mongoose.model('Property', propertySchema);

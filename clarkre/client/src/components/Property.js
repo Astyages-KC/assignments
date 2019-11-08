@@ -14,6 +14,9 @@ const Property = (props) => {
             <p>Price: {props.price}</p>
             <p>Listed on: {moment(props.createdOn).format("MMMM Do YYYY")}</p>
             <p>Created by: {props.username}</p>
+            {/* <p>image {props.imageUrl} </p> */}
+            <img className="home-img" src={props.imageUrl} alt="logo" />
+            {console.log(props)}
             </div>
             <div className="edit-del-style">
             <Link to={'/editform/' + props._id} className='edit-linkstyle'>Edit</Link>

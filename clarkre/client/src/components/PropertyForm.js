@@ -6,8 +6,9 @@ const initState = {
   city: "",
   state: "",
   zipCode: "",
+  price: "",
   forRentOrSale: "",
-  price: ""
+  imageUrl: ""
 };
 
 function PropertyForm() {
@@ -17,10 +18,13 @@ function PropertyForm() {
 
   const handleChange = e => {
     const { name, value } = e.target;
-    setInputs(prevInputs => ({
+    console.log('name:', name, 'value', value)
+    setInputs(prevInputs => {
+      return {
       ...prevInputs,
       [name]: value
-    }));
+      };
+    })
   };
 
   const handleSubmit = e => {
@@ -104,23 +108,17 @@ function PropertyForm() {
           placeholder="Sale"
         />
         <br />
-        
-        {/* <input
+        Image link:
+        <input
           type="text"
           name="imageUrl"
           className="propertyForm"
           value={inputs.imageUrl}
           placeholder="Image Link"
-          /><br /> */}
+          onChange={handleChange}
+          /><br />
         <button>Submit</button>
-        
       </form>
-      {
-        //mapped editable/deletable listings
-        //map through each property and return an 'edit property form',
-        //passing in the property's id and information
-        //This form also needs a handleDelete, and a handleEdit function
-      }
     </div>
   );
 }
