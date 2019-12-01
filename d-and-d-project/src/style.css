@@ -4,13 +4,6 @@
     box-sizing: border-box;
 }
 
-/* font-family: 'Handlee', cursive;
-font-family: 'Special Elite', cursive;
-font-family: 'Architects Daughter', cursive;
-font-family: 'Fredericka the Great', cursive; 
-font-family: 'Grenze', serif;
-font-family: 'Playfair Display', serif; */
-
 .overlay {
     display: grid;
     
@@ -68,11 +61,6 @@ font-family: 'Playfair Display', serif; */
 
 
 .classBox2 {
-    /* background-image: url(https://i.imgur.com/IIVTghJ.gif); */
-    /* background-size: contain;
-    background-size: auto; */
-    /* height: 100%;
-    width: 100%; */
     display: flex;
     justify-content: center;
     align-content: center;
@@ -84,7 +72,6 @@ font-family: 'Playfair Display', serif; */
     background-image: url(https://wallpaperaccess.com/full/117930.jpg);
     height: 100%;
     width: auto;
-    /* background-repeat: repeat-y; */
     background-size: contain;
 }
 
@@ -173,7 +160,6 @@ button {
     display: flex;
     text-align: left;
     justify-content: left;
-    /* padding-left: 8px; */
     text-indent: 6px;
     font-size: 22px;
 
@@ -447,42 +433,3 @@ button {
      background-image: url("");
    }
   }
-
-/* @media (max-width: 760px) {
-    .charBuildPage {
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-size: auto;
-    background-position: bottom;
-    object-fit: cover;
-    }
-    .overlay {
-        height: 100%;
-        width: 100%;
-        font-size: 20px;
-        font-family: cursive, Courier, monospace;
-        color: rgb(82, 56, 60);
-        background-color: rgba(207, 199, 210, 0.50);
-    
-    }
-
-} */
-
-
-
-/* @media (max-width: 768px) {
-    body {
-        background-color: lightblue;
-    }
-    .pinkLine {
-        background-color: #F5C6D6;
-        width: 100%;
-        margin: auto;
-    }
-    .redLines {
-        background-color: #EE2E84;
-        width: 100%;
-        margin: auto;    
-    } */
