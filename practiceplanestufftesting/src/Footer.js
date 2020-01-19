@@ -6,7 +6,7 @@ import { Linking } from 'react-native';
 const Footer = () => {
     return(
         <div>
-            
+            footer
             
         </div>
     )
