@@ -1,14 +1,16 @@
 const express = require('express')
 const app = express()
-require('dotenv').config()
 const mongoose = require('mongoose')
 const morgan = require('morgan')
 const expressJWT = require('express-jwt')
-const PORT = process.env.PORT || 7000
+const PORT = process.env.PORT || 7000;
+require('dotenv').config()
 
 // Middleware that fire on every request
 app.use(express.json)  //req body
 app.use(morgan("dev"))  //logger
+app.use("/api/photo", require('./routes/photoRouter.js'))
+app.use("/photo", require('./routes/publicPhotoRouter.js'))
 
 //connect to DB
 mongoose.connect("mongodb://localhost:27017/instajam",
